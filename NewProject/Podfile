@@ -1,0 +1,55 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'SiriIntent' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for SiriIntent
+
+end
+
+target 'User' do
+  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+  use_frameworks!
+  
+	   pod 'Alamofire'
+    pod 'KWDrawerController', '~> 4.1.6'
+    #pod 'SwiftLint'
+    pod 'GoogleMaps'
+    pod 'GooglePlaces'
+    pod 'lottie-ios'
+    pod 'DateTimePicker'
+    pod 'PopupDialog', '~> 0.7'
+    #pod 'FloatRatingView', '~> 2.0.0'
+    #pod 'IQKeyboardManager'
+    pod 'Google/SignIn'
+    pod 'FBSDKLoginKit'
+    pod 'IQKeyboardManagerSwift', '~> 5.0.0'
+    pod 'IHKeyboardAvoiding'
+    pod 'Fabric', '~> 1.7.7'
+    pod 'Crashlytics', '~> 3.10.2'
+    pod 'Firebase/Core'
+    pod 'Firebase/Database'
+    pod 'Firebase/Storage'
+    pod 'ImagePicker'
+    pod 'Lightbox'
+    pod 'FacebookCore'
+    pod 'FacebookLogin'
+    pod 'Stripe'
+    pod 'CreditCardForm'
+    pod 'NewPopMenu', '~> 2.0'
+
+  # Pods for User
+
+  target 'UserTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'UserUITests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end

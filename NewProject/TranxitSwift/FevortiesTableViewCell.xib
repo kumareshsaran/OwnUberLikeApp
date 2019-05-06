@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FevortiesTableViewCell" id="KGk-i7-Jjw" customClass="FevortiesTableViewCell" customModule="User" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lNg-sa-hwL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="work" translatesAutoresizingMaskIntoConstraints="NO" id="0Aa-eg-hJb">
+                                <rect key="frame" x="16" y="7" width="20" height="15"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="15" id="CPj-ae-ftu"/>
+                                    <constraint firstAttribute="width" constant="20" id="xFW-dg-fZS"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chennai " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a53-hN-U32">
+                                <rect key="frame" x="52" y="26.5" width="258" height="14.5"/>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Home" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="idc-nq-xzW">
+                                <rect key="frame" x="51" y="8" width="33" height="13.5"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wFA-MR-ryP">
+                                <rect key="frame" x="0.0" y="42.5" width="320" height="1"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="lightTextColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="5pV-rx-YJh"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="a53-hN-U32" firstAttribute="leading" secondItem="0Aa-eg-hJb" secondAttribute="trailing" constant="16" id="LlD-lq-xT1"/>
+                            <constraint firstItem="wFA-MR-ryP" firstAttribute="leading" secondItem="lNg-sa-hwL" secondAttribute="leading" id="Osu-uO-vmw"/>
+                            <constraint firstItem="idc-nq-xzW" firstAttribute="centerY" secondItem="0Aa-eg-hJb" secondAttribute="centerY" id="V1n-lX-bQw"/>
+                            <constraint firstItem="idc-nq-xzW" firstAttribute="leading" secondItem="0Aa-eg-hJb" secondAttribute="trailing" constant="15" id="WEI-KK-XHu"/>
+                            <constraint firstAttribute="bottom" secondItem="wFA-MR-ryP" secondAttribute="bottom" id="YDv-aB-9EN"/>
+                            <constraint firstItem="0Aa-eg-hJb" firstAttribute="leading" secondItem="lNg-sa-hwL" secondAttribute="leading" constant="16" id="aer-QC-gWA"/>
+                            <constraint firstAttribute="trailing" secondItem="a53-hN-U32" secondAttribute="trailing" constant="10" id="ccL-SA-zV1"/>
+                            <constraint firstItem="a53-hN-U32" firstAttribute="top" secondItem="idc-nq-xzW" secondAttribute="bottom" constant="5" id="qSl-ij-BdW"/>
+                            <constraint firstItem="0Aa-eg-hJb" firstAttribute="centerY" secondItem="lNg-sa-hwL" secondAttribute="centerY" constant="-7.25" id="vHv-Nv-pBA"/>
+                            <constraint firstAttribute="trailing" secondItem="wFA-MR-ryP" secondAttribute="trailing" id="zdv-7v-A7e"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="lNg-sa-hwL" secondAttribute="bottom" id="Qve-7k-e9U"/>
+                    <constraint firstAttribute="trailing" secondItem="lNg-sa-hwL" secondAttribute="trailing" id="Y37-vM-rN9"/>
+                    <constraint firstItem="lNg-sa-hwL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="aCy-UX-IPT"/>
+                    <constraint firstItem="lNg-sa-hwL" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="kAv-as-cmH"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageVIewFev" destination="0Aa-eg-hJb" id="x9S-2R-ibk"/>
+                <outlet property="labelAddessValue" destination="a53-hN-U32" id="49F-w6-q0R"/>
+                <outlet property="labelAddressTitle" destination="idc-nq-xzW" id="hOV-Rh-DHV"/>
+            </connections>
+            <point key="canvasLocation" x="52.799999999999997" y="48.575712143928037"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="work" width="204.80000305175781" height="204.80000305175781"/>
+    </resources>
+</document>
