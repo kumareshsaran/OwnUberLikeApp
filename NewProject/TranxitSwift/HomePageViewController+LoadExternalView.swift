@@ -58,21 +58,27 @@ extension HomePageViewController {
             self.view.bringSubview(toFront: self.rideNowDetailView!)
             
             NSLayoutConstraint.activate([(
-                    self.rideNowDetailView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0))!,(self.rideNowDetailView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0))!,(self.rideNowDetailView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0))!,
-                                                                                                                      ])
+                    self.rideNowDetailView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0))!,(self.rideNowDetailView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0))!,(self.rideNowDetailView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0))!,])
+            
           self.rideNowDetailView?.heightAnchor.constraint(equalToConstant: (self.view?.frame.height ?? 0.0 ) - 150 ).isActive = true
-            
-             //self.rideNowDetailView?.heightAnchor.constraint(equalToConstant: (self.view?.frame.height ?? 0.0) / 2 ).isActive = true
-            
+
         }
         
         self.rideNowDetailView?.viewMainHeight = self.view
         self.rideNowDetailView?.rideNowHeightConstrait = (self.rideNowDetailView?.heightAnchor.constraint(equalToConstant: (self.view?.frame.height ?? 0.0 ) - 150))!
-        
-        
-        
+
         self.rideNowDetailView?.onClickCancel = { [weak  self] in
                 self?.isShowFareDetailView = false
+        }
+        
+        self.rideNowDetailView?.onClickSourceAddress = { [weak self] in
+            let navigation = UINavigationController(rootViewController: LocationSearchTableViewController())
+            self?.presentWithClass(viewController: navigation)
+        }
+        
+        self.rideNowDetailView?.onClickDestinationAddress = { [weak self] in
+            let navigation = UINavigationController(rootViewController: LocationSearchTableViewController())
+            self?.presentWithClass(viewController: navigation)
         }
     }
     

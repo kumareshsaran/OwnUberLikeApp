@@ -11,24 +11,36 @@ import UIKit
 class RideNowDetailView: UIView {
     
     @IBOutlet weak var viewMain: UIView!
-    
+    var viewMainHeight = UIView()
     
     @IBOutlet weak var tableviewFareDetails: UITableView!
     @IBOutlet weak var scrollBlurView: UIVisualEffectView!
     
     @IBOutlet weak var buttonRideNow: UIButton!
+    @IBOutlet weak var buttonSourceAddress: UIButton!
+    @IBOutlet weak var buttonDestinationAddress: UIButton!
     
     var rideNowHeightConstrait = NSLayoutConstraint()
     
-    var viewMainHeight = UIView()
-    
     var onScrollTableView : ((CGPoint)->())?
     var onClickCancel : (()->())?
+    var onClickSourceAddress : (()->())?
+    var onClickDestinationAddress : (()->())?
+    
     let bgView : UIImageView = {
         let view = UIImageView()
         view.image = #imageLiteral(resourceName: "WomenProfile")
         return view
     }()
+    
+    var CellCount = Int()
+    
+    var reloadWithAddData: Bool = false {
+        didSet {
+            CellCount = reloadWithAddData ? 5 : 0
+            self.tableviewFareDetails.reloadSections(IndexSet(integersIn: 1...1), with: .fade)
+        }
+    }
     
     var isTableViewScrollEnable : Bool = true {
         didSet {
@@ -38,13 +50,12 @@ class RideNowDetailView: UIView {
     }
     
     override func draw(_ rect: CGRect) {
-        // Drawing code
-        
         self.viewMain.roundCorners(corners: [.topLeft , .topRight], radius: 10)
-        
         self.viewMain.addShadow()
         
-        self.tableviewFareDetails.register(UINib(nibName: XIB.Names.FareTableViewCell, bundle: nil), forCellReuseIdentifier:XIB.Names.FareTableViewCell )
+        [XIB.Names.FareTableViewCell, XIB.Names.BookForSomeOneTableViewCell,XIB.Names.CouponTableViewCell].forEach { (identifier) in
+            self.tableviewFareDetails.register(UINib(nibName: identifier, bundle: nil), forCellReuseIdentifier: identifier )
+        }
         
         self.tableviewFareDetails.delegate = self
         self.tableviewFareDetails.dataSource = self
@@ -53,9 +64,12 @@ class RideNowDetailView: UIView {
         
         self.isUserInteractionEnabled = true
         self.addGestureRecognizer(UIPanGestureRecognizer(target: self, action: #selector(gestireAction(sender:))))
-        
         self.buttonRideNow.showsTouchWhenHighlighted = true
         
+        //self.reloadWithAddData = false
+        
+        self.buttonSourceAddress.addTarget(self, action: #selector(addreeButtonTapped(sender:)), for: .touchUpInside)
+        self.buttonDestinationAddress.addTarget(self, action: #selector(addreeButtonTapped(sender:)), for: .touchUpInside)
     }
     
     override func layoutSubviews() {
@@ -72,6 +86,14 @@ class RideNowDetailView: UIView {
         self.onClickCancel?()
     }
     
+    @IBAction func addreeButtonTapped(sender: UIButton){
+        if sender == self.buttonSourceAddress {
+            self.onClickSourceAddress?()
+        }else{
+            self.onClickDestinationAddress?()
+        }
+    }
+    
     @IBAction func gestireAction(sender: UIPanGestureRecognizer){
         let state = sender.state
         let translation = sender.translation(in: sender.view).y
@@ -84,19 +106,15 @@ class RideNowDetailView: UIView {
                 self.rideNowHeightConstrait.constant =  (self.viewMainHeight.frame.height)  - abs(translation)
             }else if state == .ended {
                 if (self.viewMainHeight.frame.height)  - abs(translation) > self.viewMainHeight.frame.height / 2 {
-                    
                     self.rideNowHeightConstrait.constant = self.viewMainHeight.frame.height
                     UIView.animate(withDuration: 0.001) {
                         self.layoutIfNeeded()
                     }
-                    
                 }else if (self.viewMainHeight.frame.height)  - abs(translation) < self.viewMainHeight.frame.height / 3 {
-                  
                     self.rideNowHeightConstrait.constant = self.viewMainHeight.frame.height / 2
                     UIView.animate(withDuration: 0.001) {
                         self.layoutIfNeeded()
                     }
-                    
                 }
                 else{
                     self.rideNowHeightConstrait.constant =  (self.viewMainHeight.frame.height)  - abs(translation)
@@ -125,33 +143,82 @@ class RideNowDetailView: UIView {
 }
 
 extension RideNowDetailView : UITableViewDelegate, UITableViewDataSource {
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 2
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        if section == 0 {
+            return 2
+        }else if section ==  1  {
+            return CellCount
+        }
+        return 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: XIB.Names.FareTableViewCell, for: indexPath)
-        cell.selectionStyle = .none
+        if indexPath.section == 0 {
+            if indexPath.row == 0 {
+                if let cell = tableView.dequeueReusableCell(withIdentifier: XIB.Names.FareTableViewCell, for: indexPath) as? FareTableViewCell {
+                    cell.selectionStyle = .none
+                    return cell
+                }
+                
+            }else if indexPath.row == 1 {
+                if let bookForSomeCell = tableView.dequeueReusableCell(withIdentifier: XIB.Names.BookForSomeOneTableViewCell) as? BookForSomeOneTableViewCell{
+                    return bookForSomeCell
+                }
+                
+            }
+        }else if  indexPath.section == 1 {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: XIB.Names.CouponTableViewCell, for: indexPath) as? CouponTableViewCell {
+                cell.selectionStyle = .none
+                return cell
+            }
+        }
         
-        return cell
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 80
+        switch indexPath.section {
+        case 0:
+            return 64
+        case 1:
+            return 100
+        default:
+            return 0
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let sectionView = Bundle.main.loadNibNamed(XIB.Names.RideNowHeaderSection, owner: self, options: nil)?.first as! RideNowHeaderSection
+        sectionView.onClickCouponApply = {
+            self.reloadWithAddData = self.reloadWithAddData ? false : true
+        }
+        return sectionView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        switch section {
+        case 0:
+            return 0
+        case 1:
+            return 44
+        default:
+            return 0
+        }
+        
     }
     
     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
         if scrollView.contentOffset.y <= 0 {
             self.tableviewFareDetails.isScrollEnabled = false
         }else{
             isTableViewScrollEnable = true
         }
-        
-        
-        
     }
-    
-    
     
 }

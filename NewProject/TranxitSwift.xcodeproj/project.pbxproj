@@ -92,6 +92,8 @@
 		086BAF6420078E220087F15A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086BAF6320078E220087F15A /* ViewController.swift */; };
 		0875010320D7D4EC00CFA858 /* IntentHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0875010220D7D4EC00CFA858 /* IntentHandler.swift */; };
 		0875010720D7D4EC00CFA858 /* SiriIntent.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 0875010020D7D4EC00CFA858 /* SiriIntent.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		0876C50E2283425500C3638A /* CouponTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0876C50C2283425500C3638A /* CouponTableViewCell.swift */; };
+		0876C50F2283425500C3638A /* CouponTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0876C50D2283425500C3638A /* CouponTableViewCell.xib */; };
 		087DCFAE2077920A0040BDBB /* Sequence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 087DCFAD2077920A0040BDBB /* Sequence.swift */; };
 		08813E57213D146B00830717 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08813E56213D146B00830717 /* UserDefaultsKeys.swift */; };
 		08813E58213D147800830717 /* UserDefaultsKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08813E56213D146B00830717 /* UserDefaultsKeys.swift */; };
@@ -134,6 +136,10 @@
 		08E281652276280700D872A8 /* SearchResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E281632276280700D872A8 /* SearchResultTableViewCell.xib */; };
 		08E2B21B20C94F49002E689B /* Model.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 08E2B21920C94F49002E689B /* Model.xcdatamodeld */; };
 		08E2B21E20C950FD002E689B /* CoreDataHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E2B21D20C950FD002E689B /* CoreDataHelper.swift */; };
+		08E401CC2282153000EADF1B /* BookForSomeOneTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E401CA2282153000EADF1B /* BookForSomeOneTableViewCell.swift */; };
+		08E401CD2282153000EADF1B /* BookForSomeOneTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E401CB2282153000EADF1B /* BookForSomeOneTableViewCell.xib */; };
+		08E401D02282200F00EADF1B /* RideNowHeaderSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08E401CF2282200F00EADF1B /* RideNowHeaderSection.swift */; };
+		08E401D22282202F00EADF1B /* RideNowHeaderSection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 08E401D12282202F00EADF1B /* RideNowHeaderSection.xib */; };
 		08EBFC86224BF13D00000915 /* TextField+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EBFC85224BF13D00000915 /* TextField+Extension.swift */; };
 		08EBFC88224BF1CD00000915 /* Label+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EBFC87224BF1CD00000915 /* Label+Extension.swift */; };
 		08EBFC8A224BF23500000915 /* Button+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08EBFC89224BF23500000915 /* Button+Extension.swift */; };
@@ -327,6 +333,8 @@
 		0875010220D7D4EC00CFA858 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
 		0875010420D7D4EC00CFA858 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0875010B20D7D56400CFA858 /* User.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = User.entitlements; sourceTree = "<group>"; };
+		0876C50C2283425500C3638A /* CouponTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CouponTableViewCell.swift; sourceTree = "<group>"; };
+		0876C50D2283425500C3638A /* CouponTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CouponTableViewCell.xib; sourceTree = "<group>"; };
 		087DCFAD2077920A0040BDBB /* Sequence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sequence.swift; sourceTree = "<group>"; };
 		08813E56213D146B00830717 /* UserDefaultsKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsKeys.swift; sourceTree = "<group>"; };
 		08813E5A213D443400830717 /* SiriIntent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SiriIntent.entitlements; sourceTree = "<group>"; };
@@ -373,6 +381,10 @@
 		08E281632276280700D872A8 /* SearchResultTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SearchResultTableViewCell.xib; sourceTree = "<group>"; };
 		08E2B21A20C94F49002E689B /* Model.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Model.xcdatamodel; sourceTree = "<group>"; };
 		08E2B21D20C950FD002E689B /* CoreDataHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataHelper.swift; sourceTree = "<group>"; };
+		08E401CA2282153000EADF1B /* BookForSomeOneTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookForSomeOneTableViewCell.swift; sourceTree = "<group>"; };
+		08E401CB2282153000EADF1B /* BookForSomeOneTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BookForSomeOneTableViewCell.xib; sourceTree = "<group>"; };
+		08E401CF2282200F00EADF1B /* RideNowHeaderSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RideNowHeaderSection.swift; sourceTree = "<group>"; };
+		08E401D12282202F00EADF1B /* RideNowHeaderSection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RideNowHeaderSection.xib; sourceTree = "<group>"; };
 		08EBFC85224BF13D00000915 /* TextField+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextField+Extension.swift"; sourceTree = "<group>"; };
 		08EBFC87224BF1CD00000915 /* Label+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Label+Extension.swift"; sourceTree = "<group>"; };
 		08EBFC89224BF23500000915 /* Button+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Button+Extension.swift"; sourceTree = "<group>"; };
@@ -830,7 +842,9 @@
 		08408AAB227A279900E13171 /* RideNowDetailTableviewCells */ = {
 			isa = PBXGroup;
 			children = (
-				084397EE2280B04A005EB5B4 /* New Group */,
+				0876C50B2283422D00C3638A /* CouponView */,
+				08E401CE22821FE200EADF1B /* HeaderSection */,
+				084397EE2280B04A005EB5B4 /* ChooseAContactForRideView */,
 				084397ED2280B038005EB5B4 /* FareDetail */,
 			);
 			name = RideNowDetailTableviewCells;
@@ -852,11 +866,13 @@
 			name = FareDetail;
 			sourceTree = "<group>";
 		};
-		084397EE2280B04A005EB5B4 /* New Group */ = {
+		084397EE2280B04A005EB5B4 /* ChooseAContactForRideView */ = {
 			isa = PBXGroup;
 			children = (
+				08E401CA2282153000EADF1B /* BookForSomeOneTableViewCell.swift */,
+				08E401CB2282153000EADF1B /* BookForSomeOneTableViewCell.xib */,
 			);
-			name = "New Group";
+			name = ChooseAContactForRideView;
 			sourceTree = "<group>";
 		};
 		08442BBC21B97ACE00A3762A /* OutstationViews */ = {
@@ -993,6 +1009,15 @@
 				0875010420D7D4EC00CFA858 /* Info.plist */,
 			);
 			path = SiriIntent;
+			sourceTree = "<group>";
+		};
+		0876C50B2283422D00C3638A /* CouponView */ = {
+			isa = PBXGroup;
+			children = (
+				0876C50C2283425500C3638A /* CouponTableViewCell.swift */,
+				0876C50D2283425500C3638A /* CouponTableViewCell.xib */,
+			);
+			path = CouponView;
 			sourceTree = "<group>";
 		};
 		08813E5B213D505F00830717 /* Config */ = {
@@ -1154,6 +1179,15 @@
 				08E2B21920C94F49002E689B /* Model.xcdatamodeld */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		08E401CE22821FE200EADF1B /* HeaderSection */ = {
+			isa = PBXGroup;
+			children = (
+				08E401CF2282200F00EADF1B /* RideNowHeaderSection.swift */,
+				08E401D12282202F00EADF1B /* RideNowHeaderSection.xib */,
+			);
+			name = HeaderSection;
 			sourceTree = "<group>";
 		};
 		08E8D79720EB6DEA00DA34AF /* Stripe */ = {
@@ -1743,6 +1777,7 @@
 				081E9CFD20BFFE57004C6884 /* suv.json in Resources */,
 				0811B17820E7B2AD00B78323 /* ChatSender.xib in Resources */,
 				085F4DE021367E5100648591 /* clanpro_narrnews.otf in Resources */,
+				08E401CD2282153000EADF1B /* BookForSomeOneTableViewCell.xib in Resources */,
 				088DA996219994EF00ED6E98 /* completed.caf in Resources */,
 				08585F4B2115E94B009DE743 /* ripple.json in Resources */,
 				08FA70A120E3CC1F009B060A /* Localizable.strings in Resources */,
@@ -1752,6 +1787,7 @@
 				08408AA7227A16E000E13171 /* RideNowDetailView.xib in Resources */,
 				0823428A20AD775A0055DDF8 /* LoaderView.xib in Resources */,
 				0848B1992250D0A300649405 /* HomePageCarSelection.xib in Resources */,
+				0876C50F2283425500C3638A /* CouponTableViewCell.xib in Resources */,
 				0811B17720E7B2AD00B78323 /* ImageCellReciever.xib in Resources */,
 				08172A2C2180EEE70007D00C /* include in Resources */,
 				08FA708720E3CA99009B060A /* Launch.storyboard in Resources */,
@@ -1765,6 +1801,7 @@
 				085F4DDF21367E5100648591 /* clanpro_medium.otf in Resources */,
 				088DA98C2199700E00ED6E98 /* pickedup.caf in Resources */,
 				08408AAF227A27BD00E13171 /* FareTableViewCell.xib in Resources */,
+				08E401D22282202F00EADF1B /* RideNowHeaderSection.xib in Resources */,
 				081548FC20A1DEA2004D0F7D /* heart.json in Resources */,
 				085F4DE121367E5100648591 /* clanpro_book.otf in Resources */,
 				088DA9942199944D00ED6E98 /* accepted.caf in Resources */,
@@ -2019,6 +2056,7 @@
 				38492B362000F65E001830AD /* View.swift in Sources */,
 				08408AA9227A173200E13171 /* RideNowDetailViwe.swift in Sources */,
 				08E2B21E20C950FD002E689B /* CoreDataHelper.swift in Sources */,
+				0876C50E2283425500C3638A /* CouponTableViewCell.swift in Sources */,
 				883389501FE8E3DC006B6C05 /* WebService.swift in Sources */,
 				08001A07203BFF8B0076D324 /* Bind.swift in Sources */,
 				08E2B21B20C94F49002E689B /* Model.xcdatamodeld in Sources */,
@@ -2041,6 +2079,7 @@
 				082C441E20E7913A00A7C892 /* FloatyWindow.swift in Sources */,
 				08FA91A220EA7C6700723B26 /* FirebaseHelper.swift in Sources */,
 				086BAF6420078E220087F15A /* ViewController.swift in Sources */,
+				08E401CC2282153000EADF1B /* BookForSomeOneTableViewCell.swift in Sources */,
 				8894801F1FECE2CA006AF5A9 /* Label.swift in Sources */,
 				082C441F20E7913A00A7C892 /* FloatyItem.swift in Sources */,
 				08A8823620C6DEBE0088BC5A /* KeyboardHelper.swift in Sources */,
@@ -2048,6 +2087,7 @@
 				086606E62005144400A79566 /* ImageView.swift in Sources */,
 				08EBFC8A224BF23500000915 /* Button+Extension.swift in Sources */,
 				082C442320E7913A00A7C892 /* FloatyDelegate.swift in Sources */,
+				08E401D02282200F00EADF1B /* RideNowHeaderSection.swift in Sources */,
 				08F4B1BC2250FB1800DC3727 /* CarSelectionCollectionViewCell.swift in Sources */,
 				083617B320B6943A009C9658 /* FloatRatingView.swift in Sources */,
 				08FA80F82263B6B600E465AE /* YourTripsDetailViewController.swift in Sources */,

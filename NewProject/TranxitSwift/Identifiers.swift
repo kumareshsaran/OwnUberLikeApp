@@ -39,6 +39,9 @@ struct XIB {
     let FevortiesTableViewCell = "FevortiesTableViewCell"
     let RideNowDetailViwe = "RideNowDetailView"
     let FareTableViewCell = "FareTableViewCell"
+    let BookForSomeOneTableViewCell = "BookForSomeOneTableViewCell"
+    let RideNowHeaderSection = "RideNowHeaderSection"
+    let CouponTableViewCell = "CouponTableViewCell"
 }
 
 

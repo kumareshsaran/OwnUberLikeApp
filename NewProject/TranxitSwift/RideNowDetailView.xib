@@ -13,11 +13,11 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="RideNowDetailView" customModule="User" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="370"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ebM-YM-zZ8">
-                    <rect key="frame" x="0.0" y="0.0" width="375" height="320"/>
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="370"/>
                     <subviews>
                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ISb-Sz-Nht">
                             <rect key="frame" x="162.5" y="19" width="50" height="6"/>
@@ -32,8 +32,8 @@
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
                         </view>
-                        <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pcC-dp-hDq">
-                            <rect key="frame" x="0.0" y="45" width="375" height="205"/>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="grouped" separatorStyle="singleLineEtched" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="pcC-dp-hDq">
+                            <rect key="frame" x="0.0" y="75" width="375" height="235"/>
                             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         </tableView>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XC9-My-UDy">
@@ -48,10 +48,10 @@
                             </connections>
                         </button>
                         <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="w0t-7w-7QO">
-                            <rect key="frame" x="16" y="255" width="343" height="60"/>
+                            <rect key="frame" x="16" y="315" width="343" height="50"/>
                             <subviews>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FOG-eM-xBu">
-                                    <rect key="frame" x="0.0" y="0.0" width="343" height="60"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="343" height="50"/>
                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                     <state key="normal" title="Button"/>
                                     <userDefinedRuntimeAttributes>
@@ -68,21 +68,78 @@
                                 </button>
                             </subviews>
                             <constraints>
-                                <constraint firstAttribute="height" constant="60" id="8em-8A-bW4"/>
+                                <constraint firstAttribute="height" constant="50" id="8em-8A-bW4"/>
                             </constraints>
                         </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8P1-nk-oXM">
+                            <rect key="frame" x="16" y="35" width="343" height="40"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coimbatore International Airport, Airport Road, Civil Aerodrome Post, Peelamedu, Coimbatore, Tamil Nadu" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBb-XR-CTT">
+                                    <rect key="frame" x="0.0" y="0.0" width="145.5" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d7F-At-oPn">
+                                    <rect key="frame" x="0.0" y="0.0" width="145.5" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="right" translatesAutoresizingMaskIntoConstraints="NO" id="IlS-YD-KzB">
+                                    <rect key="frame" x="161.5" y="10" width="20" height="20"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="ckd-Y4-MN0"/>
+                                        <constraint firstAttribute="width" constant="20" id="g7t-Bn-vQD"/>
+                                    </constraints>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dkl-xA-QpW">
+                                    <rect key="frame" x="197.5" y="0.0" width="145.5" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Coimbatore International Airport, Airport Road, Civil Aerodrome Post, Peelamedu, Coimbatore, Tamil Nadu" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tr4-tO-Vc2">
+                                    <rect key="frame" x="197.5" y="0.0" width="145.5" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" weight="light" pointSize="12"/>
+                                    <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="gBb-XR-CTT" firstAttribute="bottom" secondItem="d7F-At-oPn" secondAttribute="bottom" id="46F-T5-85v"/>
+                                <constraint firstItem="IlS-YD-KzB" firstAttribute="centerY" secondItem="8P1-nk-oXM" secondAttribute="centerY" id="8Wi-nS-R5i"/>
+                                <constraint firstItem="IlS-YD-KzB" firstAttribute="centerX" secondItem="8P1-nk-oXM" secondAttribute="centerX" id="Ajl-Sl-mWy"/>
+                                <constraint firstItem="Tr4-tO-Vc2" firstAttribute="leading" secondItem="dkl-xA-QpW" secondAttribute="leading" id="FkK-9Y-WuP"/>
+                                <constraint firstItem="dkl-xA-QpW" firstAttribute="leading" secondItem="IlS-YD-KzB" secondAttribute="trailing" constant="16" id="I4c-mg-b0X"/>
+                                <constraint firstAttribute="bottom" secondItem="dkl-xA-QpW" secondAttribute="bottom" id="MfC-f1-pML"/>
+                                <constraint firstItem="gBb-XR-CTT" firstAttribute="top" secondItem="d7F-At-oPn" secondAttribute="top" id="Uy2-fq-wN5"/>
+                                <constraint firstItem="gBb-XR-CTT" firstAttribute="trailing" secondItem="d7F-At-oPn" secondAttribute="trailing" id="dYW-ba-1by"/>
+                                <constraint firstItem="Tr4-tO-Vc2" firstAttribute="trailing" secondItem="dkl-xA-QpW" secondAttribute="trailing" id="fCG-Mh-do0"/>
+                                <constraint firstItem="dkl-xA-QpW" firstAttribute="top" secondItem="8P1-nk-oXM" secondAttribute="top" id="fOK-rr-XgD"/>
+                                <constraint firstAttribute="height" constant="40" id="hdn-Qa-D5L"/>
+                                <constraint firstItem="d7F-At-oPn" firstAttribute="top" secondItem="8P1-nk-oXM" secondAttribute="top" id="htt-an-6Cq"/>
+                                <constraint firstItem="gBb-XR-CTT" firstAttribute="leading" secondItem="d7F-At-oPn" secondAttribute="leading" id="ibg-gH-jjB"/>
+                                <constraint firstItem="Tr4-tO-Vc2" firstAttribute="top" secondItem="dkl-xA-QpW" secondAttribute="top" id="ieU-hD-bA6"/>
+                                <constraint firstItem="Tr4-tO-Vc2" firstAttribute="bottom" secondItem="dkl-xA-QpW" secondAttribute="bottom" id="lGk-pK-vuP"/>
+                                <constraint firstAttribute="bottom" secondItem="d7F-At-oPn" secondAttribute="bottom" id="ptd-tu-Q9H"/>
+                                <constraint firstAttribute="trailing" secondItem="dkl-xA-QpW" secondAttribute="trailing" id="qU2-oe-CL8"/>
+                                <constraint firstItem="IlS-YD-KzB" firstAttribute="leading" secondItem="d7F-At-oPn" secondAttribute="trailing" constant="16" id="t5Q-7B-rpG"/>
+                                <constraint firstItem="d7F-At-oPn" firstAttribute="leading" secondItem="8P1-nk-oXM" secondAttribute="leading" id="xnM-nj-OFg"/>
+                            </constraints>
+                        </view>
                     </subviews>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstItem="w0t-7w-7QO" firstAttribute="top" secondItem="pcC-dp-hDq" secondAttribute="bottom" constant="5" id="010-Yx-USo"/>
                         <constraint firstAttribute="trailing" secondItem="XC9-My-UDy" secondAttribute="trailing" constant="16" id="18G-BK-Sqe"/>
+                        <constraint firstItem="8P1-nk-oXM" firstAttribute="leading" secondItem="ebM-YM-zZ8" secondAttribute="leading" constant="16" id="1Na-1H-r9J"/>
+                        <constraint firstItem="8P1-nk-oXM" firstAttribute="top" secondItem="ISb-Sz-Nht" secondAttribute="bottom" constant="10" id="1wf-33-uKd"/>
                         <constraint firstItem="XC9-My-UDy" firstAttribute="top" secondItem="ebM-YM-zZ8" secondAttribute="top" constant="10" id="2aB-yQ-XZN"/>
                         <constraint firstItem="w0t-7w-7QO" firstAttribute="leading" secondItem="ebM-YM-zZ8" secondAttribute="leading" constant="16" id="D0m-3o-kad"/>
+                        <constraint firstAttribute="trailing" secondItem="8P1-nk-oXM" secondAttribute="trailing" constant="16" id="GDW-X4-6FO"/>
                         <constraint firstAttribute="bottom" secondItem="w0t-7w-7QO" secondAttribute="bottom" constant="5" id="RDi-Az-mvQ"/>
                         <constraint firstItem="ISb-Sz-Nht" firstAttribute="centerX" secondItem="ebM-YM-zZ8" secondAttribute="centerX" id="RQe-hf-blM"/>
-                        <constraint firstItem="pcC-dp-hDq" firstAttribute="top" secondItem="ISb-Sz-Nht" secondAttribute="bottom" constant="20" id="RXo-wu-Bh0"/>
                         <constraint firstItem="pcC-dp-hDq" firstAttribute="leading" secondItem="ebM-YM-zZ8" secondAttribute="leading" id="VDg-Yu-jYh"/>
                         <constraint firstAttribute="trailing" secondItem="w0t-7w-7QO" secondAttribute="trailing" constant="16" id="VFe-05-Hwz"/>
+                        <constraint firstItem="pcC-dp-hDq" firstAttribute="top" secondItem="8P1-nk-oXM" secondAttribute="bottom" id="Xoh-ib-wfY"/>
                         <constraint firstItem="ISb-Sz-Nht" firstAttribute="centerY" secondItem="XC9-My-UDy" secondAttribute="centerY" id="eLO-9f-79d"/>
                         <constraint firstAttribute="trailing" secondItem="pcC-dp-hDq" secondAttribute="trailing" id="ebG-iU-I5d"/>
                     </constraints>
@@ -175,14 +232,17 @@
                 </mask>
             </variation>
             <connections>
+                <outlet property="buttonDestinationAddress" destination="dkl-xA-QpW" id="sCv-yO-NbW"/>
                 <outlet property="buttonRideNow" destination="FOG-eM-xBu" id="hFR-B5-eAW"/>
+                <outlet property="buttonSourceAddress" destination="d7F-At-oPn" id="iVd-mR-Mia"/>
                 <outlet property="tableviewFareDetails" destination="pcC-dp-hDq" id="Rge-Iy-lkb"/>
                 <outlet property="viewMain" destination="ebM-YM-zZ8" id="CO4-CP-kxv"/>
             </connections>
-            <point key="canvasLocation" x="316" y="-586.50674662668666"/>
+            <point key="canvasLocation" x="316" y="-608.9955022488756"/>
         </view>
     </objects>
     <resources>
         <image name="Close" width="192" height="192"/>
+        <image name="right" width="102.40000152587891" height="102.40000152587891"/>
     </resources>
 </document>

@@ -12,31 +12,30 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FareTableViewCell" rowHeight="69" id="KGk-i7-Jjw" customClass="FareTableViewCell" customModule="User" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="320" height="69"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="FareTableViewCell" rowHeight="64" id="KGk-i7-Jjw" customClass="FareTableViewCell" customModule="User" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="64"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="320" height="68.5"/>
+                <rect key="frame" x="0.0" y="0.0" width="320" height="63.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="MOY-t1-eaB">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="68.5"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </imageView>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Payable:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gG-fq-qil">
-                        <rect key="frame" x="16" y="19" width="106" height="20.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total Payable:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gG-fq-qil">
+                        <rect key="frame" x="0.0" y="5" width="320" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$673" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhT-Go-4He">
-                        <rect key="frame" x="142" y="19" width="41.5" height="21"/>
-                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="$673" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LhT-Go-4He">
+                        <rect key="frame" x="0.0" y="21.5" width="320" height="21"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fare Are higher then normal rate" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8J8-f0-gAg">
-                        <rect key="frame" x="16" y="49" width="288" height="14.5"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fare Are higher then normal rate" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8J8-f0-gAg">
+                        <rect key="frame" x="16" y="46.5" width="288" height="12"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="10"/>
                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <nil key="highlightedColor"/>
                     </label>
@@ -44,13 +43,15 @@
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
                     <constraint firstAttribute="bottom" secondItem="8J8-f0-gAg" secondAttribute="bottom" constant="5" id="0DX-FK-WTW"/>
+                    <constraint firstAttribute="trailing" secondItem="LhT-Go-4He" secondAttribute="trailing" id="1va-dT-z2a"/>
+                    <constraint firstItem="8gG-fq-qil" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="78o-rY-4Oh"/>
+                    <constraint firstAttribute="trailing" secondItem="8gG-fq-qil" secondAttribute="trailing" id="8Wa-1r-HK0"/>
+                    <constraint firstItem="LhT-Go-4He" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="BG8-l1-U1O"/>
                     <constraint firstItem="8J8-f0-gAg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ClQ-6o-tNo"/>
                     <constraint firstItem="MOY-t1-eaB" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="IJh-wL-7xm"/>
-                    <constraint firstItem="LhT-Go-4He" firstAttribute="centerY" secondItem="8gG-fq-qil" secondAttribute="centerY" id="K24-u4-y5Z"/>
-                    <constraint firstItem="8gG-fq-qil" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-5" id="Pq1-Kt-vkx"/>
                     <constraint firstItem="MOY-t1-eaB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="QGk-tQ-QP1"/>
-                    <constraint firstItem="LhT-Go-4He" firstAttribute="leading" secondItem="8gG-fq-qil" secondAttribute="trailing" constant="20" id="Yj6-Ua-Vef"/>
-                    <constraint firstItem="8gG-fq-qil" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="eBy-xr-txj"/>
+                    <constraint firstItem="8gG-fq-qil" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Soz-Qo-vt6"/>
+                    <constraint firstItem="LhT-Go-4He" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="Ufj-is-ebU"/>
                     <constraint firstAttribute="trailing" secondItem="MOY-t1-eaB" secondAttribute="trailing" id="fLs-5y-P9f"/>
                     <constraint firstAttribute="trailing" secondItem="8J8-f0-gAg" secondAttribute="trailing" constant="16" id="xT8-RN-gtH"/>
                     <constraint firstAttribute="bottom" secondItem="MOY-t1-eaB" secondAttribute="bottom" id="z3t-EJ-4Nh"/>
@@ -63,7 +64,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="137.59999999999999" y="138.0809595202399"/>
+            <point key="canvasLocation" x="137.59999999999999" y="135.832083958021"/>
         </tableViewCell>
     </objects>
 </document>

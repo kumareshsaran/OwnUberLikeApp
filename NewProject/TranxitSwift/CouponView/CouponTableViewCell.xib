@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="94" id="KGk-i7-Jjw" customClass="CouponTableViewCell" customModule="User" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="94"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="93.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="printable-coupons" translatesAutoresizingMaskIntoConstraints="NO" id="2K9-pT-gld">
+                        <rect key="frame" x="16" y="10" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="Ze3-y0-hUz"/>
+                            <constraint firstAttribute="height" constant="50" id="myg-kz-3i3"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="GET 200 : 50% off on your ride" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wGd-V4-aas">
+                        <rect key="frame" x="82" y="10" width="222" height="17"/>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Use code GET200 and get 50% off upto Rs 50 on your first ride" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2z-Wo-5L9">
+                        <rect key="frame" x="82" y="32" width="222" height="33.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="14"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="h2z-Wo-5L9" firstAttribute="top" secondItem="wGd-V4-aas" secondAttribute="bottom" constant="5" id="GZd-kB-EVh"/>
+                    <constraint firstAttribute="trailing" secondItem="h2z-Wo-5L9" secondAttribute="trailing" constant="16" id="W4y-Uy-hX0"/>
+                    <constraint firstAttribute="trailing" secondItem="wGd-V4-aas" secondAttribute="trailing" constant="16" id="W8S-o9-qtR"/>
+                    <constraint firstItem="h2z-Wo-5L9" firstAttribute="leading" secondItem="2K9-pT-gld" secondAttribute="trailing" constant="16" id="epA-zy-Jwz"/>
+                    <constraint firstItem="2K9-pT-gld" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="g5e-iN-eGl"/>
+                    <constraint firstItem="wGd-V4-aas" firstAttribute="leading" secondItem="2K9-pT-gld" secondAttribute="trailing" constant="16" id="kHh-9n-9rP"/>
+                    <constraint firstItem="2K9-pT-gld" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="qAE-Fd-SOp"/>
+                    <constraint firstItem="h2z-Wo-5L9" firstAttribute="leading" secondItem="wGd-V4-aas" secondAttribute="leading" id="ryF-G2-GcM"/>
+                    <constraint firstItem="wGd-V4-aas" firstAttribute="top" secondItem="2K9-pT-gld" secondAttribute="top" id="xOc-WA-IeV"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageViewCoupon" destination="2K9-pT-gld" id="mzu-jM-Toi"/>
+                <outlet property="labelCouponDiscription" destination="h2z-Wo-5L9" id="ids-g9-qL6"/>
+                <outlet property="labelCouponTitle" destination="wGd-V4-aas" id="1qb-yJ-Dj4"/>
+            </connections>
+            <point key="canvasLocation" x="137.59999999999999" y="150.22488755622189"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="printable-coupons" width="602" height="310"/>
+    </resources>
+</document>
