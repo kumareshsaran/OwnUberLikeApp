@@ -22,6 +22,7 @@ struct Storyboard {
     let yourTripsViewController = "yourTripsViewController"
     let YourTripsDetailViewController = "YourTripsDetailViewController"
     let PaymentViewController = "PaymentViewController"
+    let AddCardViewController = "AddCardViewController"
  
     
 }
@@ -33,8 +34,8 @@ struct XIB {
     
     static let Names = XIB()
     let HomePageCarSelection = "HomePageCarSelection"
-     let CarSelectionCollectionViewCell = "CarSelectionCollectionViewCell"
-      let YourTripsTableViewCell = "YourTripsTableViewCell"
+    let CarSelectionCollectionViewCell = "CarSelectionCollectionViewCell"
+    let YourTripsTableViewCell = "YourTripsTableViewCell"
     let PaymentTableViewCell = "PaymentTableViewCell"
     let FevortiesTableViewCell = "FevortiesTableViewCell"
     let RideNowDetailViwe = "RideNowDetailView"
@@ -42,6 +43,7 @@ struct XIB {
     let BookForSomeOneTableViewCell = "BookForSomeOneTableViewCell"
     let RideNowHeaderSection = "RideNowHeaderSection"
     let CouponTableViewCell = "CouponTableViewCell"
+    let AddCardTableViewCell = "AddCardTableViewCell"
 }
 
 

@@ -73,10 +73,10 @@ extension SideBarTableViewController {
         // self.drawerController?.fadeColor = UIColor
         self.drawerController?.shadowOpacity = 0.2
         let fadeWidth = self.view.frame.width*(0.2)
-        self.profileImageCenterContraint.constant = 0//-(fadeWidth/3)
+      //  self.profileImageCenterContraint.constant = 0 //-(fadeWidth/3)
         self.drawerController?.drawerWidth = Float(self.view.frame.width - fadeWidth)
         self.viewShadow.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(self.imageViewAction)))
-        self.setDesigns()
+        
     }
     
     // MARK:- Set Designs
@@ -87,24 +87,13 @@ extension SideBarTableViewController {
         self.imageViewProfile.makeRoundedCorner()
         
     }
-    
-    
-    // MARK:- Set Designs
-    
-    private func setDesigns () {
-        
-//        Common.setFont(to: labelName)
-//        Common.setFont(to: labelEmail)
-    }
-    
-    
     //MARK:- SetValues
     
     private func setValues(){
         
         Cache.image(forUrl: Common.getImageUrl(for: User.main.picture)) { (image) in
             DispatchQueue.main.async {
-                self.imageViewProfile.image = image == nil ? #imageLiteral(resourceName: "userPlaceholder") : image
+                self.imageViewProfile.image = image == nil ? #imageLiteral(resourceName: "MenProfile") : image
             }
         }
         self.labelName.text = "John"//String.removeNil(User.main.firstName)+" "+String.removeNil(User.main.lastName)
@@ -143,6 +132,8 @@ extension SideBarTableViewController {
             break
         case Constants.string.aboutUs.localize():
             break
+        case Constants.string.logout.localize():
+            self.navigationController?.popToRootViewController(animated: true)
         default:
             break
         }
@@ -188,7 +179,9 @@ extension SideBarTableViewController {
 //        Common.setFont(to: tableCell.textLabel!, isTitle: true, size: 22)
         
         tableCell.labelTitle.text = sideBarList[indexPath.row].localize()
-        tableCell.imageViewForTitle.image = self.sideBarListImage[indexPath.row]
+        //tableCell.imageViewForTitle.image = self.sideBarListImage[indexPath.row].withRenderingMode(.alwaysTemplate)
+        tableCell.imageViewForTitle.tintImageColor(setimage: self.sideBarListImage[indexPath.row])
+        
         
         if indexPath.row == 0 {
             tableCell.topLineView.isHidden = true
@@ -208,7 +201,7 @@ extension SideBarTableViewController {
         self.drawerController?.closeSide()
     }
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 70
+        return 60
     }
 }
 

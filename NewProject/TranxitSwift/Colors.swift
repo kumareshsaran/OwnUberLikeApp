@@ -19,6 +19,8 @@ enum Color : Int {
     case labeltextColor = 5
     case buttonTextColor = 6
     
+    case imageColor = 7
+    
     static func valueFor(id : Int)->UIColor?{
         
         switch id {
@@ -39,6 +41,8 @@ enum Color : Int {
             
         case self.buttonTextColor.rawValue:
             return .buttonTextColor
+        case self.imageColor.rawValue:
+            return .imageTintColor
             
         default:
             return nil
@@ -79,6 +83,11 @@ extension UIColor {
     static var buttonTextColor : UIColor {
         return #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1) //UIColor(red: 38/255, green: 118/255, blue: 188/255, alpha: 1)
     }
+    
+    static var imageTintColor : UIColor {
+        return #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1) //UIColor(red: 38/255, green: 118/255, blue: 188/255, alpha: 1)
+    }
+    
     
     
     

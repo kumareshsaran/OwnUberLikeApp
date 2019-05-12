@@ -10,6 +10,7 @@ import UIKit
 
 extension UIImage {
     
+    
     func resizeImage(newWidth: CGFloat) -> UIImage?{
         
         let scale = newWidth / self.size.width
@@ -37,22 +38,56 @@ extension UIImage {
         
     }
     
-//    //MARK:- Get Image color from specific point
-//    func getPixelColor(pos: CGPoint, alpha : CGFloat = 1) -> UIColor? {
-//        
-//        guard let pixelData =  self.cgImage?.dataProvider?.data, let data: UnsafePointer<UInt8> = CFDataGetBytePtr(pixelData) else {
-//            return .clear
-//        }
-//        
-//        let pixelInfo: Int = ((Int(self.size.width) * Int(pos.y)) + Int(pos.x)) * 4
-//        
-//        let r = CGFloat(data[pixelInfo]) / CGFloat(255.0)
-//        let g = CGFloat(data[pixelInfo+1]) / CGFloat(255.0)
-//        let b = CGFloat(data[pixelInfo+2]) / CGFloat(255.0)
-//        let a = CGFloat(data[pixelInfo+3]) / CGFloat(255.0)
-//        
-//        return UIColor(red: r, green: g, blue: b, alpha: a*alpha)
-//    }
-//    
     
+    func imageWithInsets(insetDimen: CGFloat) -> UIImage {
+        return imageWithInset(insets: UIEdgeInsets(top: insetDimen, left: insetDimen, bottom: insetDimen, right: insetDimen))
+    }
+    
+    func imageWithInset(insets: UIEdgeInsets) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(
+            CGSize(width: self.size.width + insets.left + insets.right,
+                   height: self.size.height + insets.top + insets.bottom), false, self.scale)
+        let origin = CGPoint(x: insets.left, y: insets.top)
+        self.draw(at: origin)
+        let imageWithInsets = UIGraphicsGetImageFromCurrentImageContext()?.withRenderingMode(self.renderingMode)
+        UIGraphicsEndImageContext()
+        return imageWithInsets!
+    }
+
+    func flip() -> UIImage {
+        
+        let img = self.imageFlippedForRightToLeftLayoutDirection()
+        return img
+        
+    }
+    
+}
+
+extension UIImageView {
+    func setImage(with urlString : String?,placeHolder placeHolderImage : UIImage?) {
+        self.image = placeHolderImage
+        guard urlString != nil, let imageUrl = URL(string: urlString!) else {
+            return
+        }
+        if let image = Cache.shared.object(forKey: urlString! as AnyObject) {
+            self.image = image
+        } else {
+            URLSession.shared.dataTask(with: imageUrl) { (data, response, error) in
+                guard data != nil, let imagePic = UIImage(data: data!), let responseUrl = response?.url?.absoluteString else {
+                    return
+                }
+                DispatchQueue.main.async {
+                    self.image = imagePic
+                }
+                Cache.shared.setObject(imagePic, forKey: responseUrl as AnyObject)
+                }.resume()
+        }
+    }
+    
+    func tintImageColor(color : UIColor = .imageTintColor , setimage: UIImage) {
+        self.image = setimage
+        self.image = self.image!.withRenderingMode(UIImage.RenderingMode.alwaysTemplate)
+        self.tintColor = color
+    }
+
 }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Foundation
 
 class ProfilePageViewController: UITableViewController {
 
@@ -28,7 +29,13 @@ class ProfilePageViewController: UITableViewController {
         // Do any additional setup after loading the view.
         initialLoad()
         
+        //NotificationCenter.default.addObserver(self, selector: #selector(statusBarHeightChange(sender:)) , name: Notification.Name.UIApplicationDidChangeStatusBarFrame, object: nil)
+        
     }
+    
+//    @IBAction func statusBarHeightChange(sender: NotificationCenter){
+//        print(#function)
+//    }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()

@@ -67,9 +67,12 @@ struct Constants {
     //MARK:- yourTrip details
     let pastTripDetail = "Past trip detail"
     
-    //PaymentViewcontroller
+    //MARK:-PaymentViewcontroller
     let cash = "Cash"
     let card = "Card"
+    let addCard = "Add card"
+    let paymentMenthod = "Payment method"
+    let savedCard = "Saved cards"
     
     //MARK:- YourTrip
     
@@ -88,6 +91,7 @@ struct Constants {
     
     //MARK:- Home Page RideNowDetailView
     let rideNow = "Ride now"
+    let applyCoupon = "Apply coupon"
     let scheduleRide = "Schedule ride"
     
 }

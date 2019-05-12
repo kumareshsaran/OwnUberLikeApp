@@ -121,16 +121,6 @@ extension UIView {
     }
 }
 
-extension UIImage {
-    
-    func flip() -> UIImage {
-        
-        let img = self.imageFlippedForRightToLeftLayoutDirection()
-        return img
-        
-    }
-    
-}
 
 
 

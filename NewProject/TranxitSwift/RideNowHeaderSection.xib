@@ -33,19 +33,33 @@
                         <action selector="ButtonApplyAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="Hew-xU-j5Q"/>
                     </connections>
                 </button>
+                <label opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B30-yr-yeB">
+                    <rect key="frame" x="0.0" y="55.5" width="375" height="0.5"/>
+                    <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="Zbv-mM-DUu"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="xdc-BS-u64" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" id="CO9-W0-iOe"/>
                 <constraint firstItem="xdc-BS-u64" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="Cru-NM-bms"/>
                 <constraint firstItem="ylm-Yd-uS8" firstAttribute="leading" secondItem="xdc-BS-u64" secondAttribute="trailing" constant="16" id="DYM-Bq-93F"/>
+                <constraint firstItem="B30-yr-yeB" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Xj0-Uv-HMz"/>
                 <constraint firstItem="ylm-Yd-uS8" firstAttribute="centerY" secondItem="xdc-BS-u64" secondAttribute="centerY" id="bBs-Cw-71m"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="B30-yr-yeB" secondAttribute="bottom" id="ie5-Z0-RSj"/>
                 <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="ylm-Yd-uS8" secondAttribute="trailing" constant="16" id="jQN-96-Giw"/>
+                <constraint firstAttribute="trailing" secondItem="B30-yr-yeB" secondAttribute="trailing" id="qeL-nr-eIk"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <connections>
                 <outlet property="buttonApply" destination="ylm-Yd-uS8" id="OAY-Xq-TxD"/>
+                <outlet property="imageTitle" destination="xdc-BS-u64" id="0s7-xr-1sW"/>
             </connections>
             <point key="canvasLocation" x="138.40000000000001" y="420.98950524737637"/>
         </view>

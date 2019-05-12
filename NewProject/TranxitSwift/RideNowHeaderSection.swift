@@ -12,6 +12,7 @@ class RideNowHeaderSection: UIView {
 
     @IBOutlet weak var buttonApply: UIButton!
     
+    @IBOutlet weak var imageTitle: UIImageView!
     var onClickCouponApply : (()->())?
     
     // Only override draw() if you perform custom drawing.
@@ -22,6 +23,11 @@ class RideNowHeaderSection: UIView {
  
     @IBAction func ButtonApplyAction(_ sender: Any) {
         self.onClickCouponApply?()
+    }
+    
+    internal func setTitle(title: String,imageTitle: UIImage){
+        self.buttonApply.setTitle(title, for: .normal)
+        self.imageTitle.image = imageTitle
     }
     
 }

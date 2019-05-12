@@ -35,6 +35,9 @@
 		081548FE20A1DF66004D0F7D /* LottieHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081548FD20A1DF66004D0F7D /* LottieHelper.swift */; };
 		08172A2C2180EEE70007D00C /* include in Resources */ = {isa = PBXBuildFile; fileRef = 08172A2B2180EEE60007D00C /* include */; };
 		08172A332180EF940007D00C /* lib in Resources */ = {isa = PBXBuildFile; fileRef = 08172A322180EF940007D00C /* lib */; };
+		081DE6BC228898780029053C /* AddCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081DE6BB228898780029053C /* AddCardViewController.swift */; };
+		081DE6C022889AFD0029053C /* AddCardTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 081DE6BE22889AFD0029053C /* AddCardTableViewCell.swift */; };
+		081DE6C122889AFD0029053C /* AddCardTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 081DE6BF22889AFD0029053C /* AddCardTableViewCell.xib */; };
 		081E9CFD20BFFE57004C6884 /* suv.json in Resources */ = {isa = PBXBuildFile; fileRef = 081E9CFC20BFFE57004C6884 /* suv.json */; };
 		082071AD22415B6300285548 /* FontManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082071AA22415B6300285548 /* FontManager.swift */; };
 		082071AE22415B6300285548 /* DeviceDetector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082071AB22415B6300285548 /* DeviceDetector.swift */; };
@@ -269,6 +272,9 @@
 		08172A302180EF790007D00C /* shim.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = shim.h; sourceTree = "<group>"; };
 		08172A312180EF790007D00C /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		08172A322180EF940007D00C /* lib */ = {isa = PBXFileReference; lastKnownFileType = folder; path = lib; sourceTree = "<group>"; };
+		081DE6BB228898780029053C /* AddCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardViewController.swift; sourceTree = "<group>"; };
+		081DE6BE22889AFD0029053C /* AddCardTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCardTableViewCell.swift; sourceTree = "<group>"; };
+		081DE6BF22889AFD0029053C /* AddCardTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCardTableViewCell.xib; sourceTree = "<group>"; };
 		081E9CFC20BFFE57004C6884 /* suv.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = suv.json; sourceTree = "<group>"; };
 		082071AA22415B6300285548 /* FontManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FontManager.swift; sourceTree = "<group>"; };
 		082071AB22415B6300285548 /* DeviceDetector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceDetector.swift; sourceTree = "<group>"; };
@@ -565,6 +571,24 @@
 				081548FD20A1DF66004D0F7D /* LottieHelper.swift */,
 			);
 			name = Lottie;
+			sourceTree = "<group>";
+		};
+		081DE6BA228898550029053C /* AddCardViewController */ = {
+			isa = PBXGroup;
+			children = (
+				081DE6BD22889ADF0029053C /* XIB */,
+				081DE6BB228898780029053C /* AddCardViewController.swift */,
+			);
+			path = AddCardViewController;
+			sourceTree = "<group>";
+		};
+		081DE6BD22889ADF0029053C /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				081DE6BE22889AFD0029053C /* AddCardTableViewCell.swift */,
+				081DE6BF22889AFD0029053C /* AddCardTableViewCell.xib */,
+			);
+			path = XIB;
 			sourceTree = "<group>";
 		};
 		0823428620AD772E0055DDF8 /* LoaderView */ = {
@@ -1069,6 +1093,7 @@
 		08B7DC70209A1487002CF17A /* Main StoryBoard */ = {
 			isa = PBXGroup;
 			children = (
+				081DE6BA228898550029053C /* AddCardViewController */,
 				08F673992270E615000FB10B /* SearchLocationViewController */,
 				083DB13E2263C1EC00C6D1EE /* PaymentViewController */,
 				08FA80F62263B67D00E465AE /* YoueTripDetail */,
@@ -1084,6 +1109,7 @@
 		08B7DC76209A14E4002CF17A /* SideBar */ = {
 			isa = PBXGroup;
 			children = (
+				8894E2551FE7D83F0097B4B3 /* Interator */,
 				08B7DC74209A14E0002CF17A /* SideBarTableViewController.swift */,
 			);
 			name = SideBar;
@@ -1470,7 +1496,6 @@
 				8894E2581FE7D8940097B4B3 /* Router */,
 				8894E2571FE7D87B0097B4B3 /* Entities */,
 				8894E2561FE7D84E0097B4B3 /* Presenter */,
-				8894E2551FE7D83F0097B4B3 /* Interator */,
 				8894E2541FE7D82D0097B4B3 /* View */,
 			);
 			name = VIPER;
@@ -1770,6 +1795,7 @@
 				08E281652276280700D872A8 /* SearchResultTableViewCell.xib in Resources */,
 				08001A0C203C241E0076D324 /* countryCodes.json in Resources */,
 				0809A1BD21830ABF00FDA198 /* arrived.caf in Resources */,
+				081DE6C122889AFD0029053C /* AddCardTableViewCell.xib in Resources */,
 				08BE879720DA421B00876C93 /* Map_style.json in Resources */,
 				08B8F43B2115EBCF0055FB82 /* bouncy_mapmaker.json in Resources */,
 				0811B16F20E7B12A00B78323 /* mesageTone.wav in Resources */,
@@ -2123,6 +2149,7 @@
 				082C442220E7913A00A7C892 /* FloatyViewController.swift in Sources */,
 				082D1B92209333F10000B7C8 /* FontHelper.swift in Sources */,
 				082D1B7E2093159A0000B7C8 /* TextFieldEffects.swift in Sources */,
+				081DE6BC228898780029053C /* AddCardViewController.swift in Sources */,
 				082071AD22415B6300285548 /* FontManager.swift in Sources */,
 				8833895D1FE8FC22006B6C05 /* Identifiers.swift in Sources */,
 				08EBFC86224BF13D00000915 /* TextField+Extension.swift in Sources */,
@@ -2139,6 +2166,7 @@
 				082C442120E7913A00A7C892 /* Floaty.swift in Sources */,
 				083DB1402263C20900C6D1EE /* PaymentViewController.swift in Sources */,
 				8871FBDA1FE7DD7F002335D5 /* WebConstants.swift in Sources */,
+				081DE6C022889AFD0029053C /* AddCardTableViewCell.swift in Sources */,
 				08D8646B2275F438007D56B4 /* FevortiesTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

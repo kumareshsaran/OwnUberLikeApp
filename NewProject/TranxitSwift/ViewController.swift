@@ -28,7 +28,11 @@ extension UIViewController {
             
             if self.navigationController != nil {
                 
-                self.navigationController?.popViewController(animated: animation)
+                if let push = self.navigationController?.popViewController(animated: animation) {
+                    self.navigationController?.popViewController(animated: animation)
+                }else{
+                    self.dismiss(animated: animation, completion: nil)
+                }
             } else {
                 
                 self.dismiss(animated: animation, completion: nil)
@@ -116,7 +120,7 @@ extension UIViewController {
         guard let keyboard = (info.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else{
             return
         }
-        bottomConstraint?.constant = (keyboard.height) + 80
+        bottomConstraint?.constant = (keyboard.height) + 50
         self.view.layoutIfNeeded()
     }
     

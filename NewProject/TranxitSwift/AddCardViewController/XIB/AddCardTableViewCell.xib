@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="AddCardTableViewCell" id="KGk-i7-Jjw" customClass="AddCardTableViewCell" customModule="User" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LwV-aT-sYA">
+                        <rect key="frame" x="16" y="0.0" width="106.5" height="43.5"/>
+                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ex6-d2-zIH">
+                        <rect key="frame" x="126" y="0.0" width="178" height="43.5"/>
+                        <nil key="textColor"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                        <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="numberPad"/>
+                    </textField>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="ex6-d2-zIH" secondAttribute="bottom" id="EQM-b4-lG5"/>
+                    <constraint firstAttribute="trailing" secondItem="ex6-d2-zIH" secondAttribute="trailing" constant="16" id="Fkb-K5-YbQ"/>
+                    <constraint firstAttribute="bottom" secondItem="LwV-aT-sYA" secondAttribute="bottom" id="hCI-lN-wa1"/>
+                    <constraint firstItem="LwV-aT-sYA" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="kC5-dE-Y3r"/>
+                    <constraint firstItem="LwV-aT-sYA" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="lYP-fA-OHU"/>
+                    <constraint firstItem="ex6-d2-zIH" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:1.8" id="nj1-ur-05G"/>
+                    <constraint firstItem="ex6-d2-zIH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="pM3-NR-mk1"/>
+                    <constraint firstItem="LwV-aT-sYA" firstAttribute="width" secondItem="H2p-sc-9uM" secondAttribute="width" multiplier="1:3" id="wbN-pU-E35"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="labelTitle" destination="LwV-aT-sYA" id="8rU-3g-k4R"/>
+                <outlet property="textFiledCardNumber" destination="ex6-d2-zIH" id="eV8-a9-nw8"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

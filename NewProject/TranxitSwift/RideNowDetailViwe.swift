@@ -26,6 +26,9 @@ class RideNowDetailView: UIView {
     var onClickCancel : (()->())?
     var onClickSourceAddress : (()->())?
     var onClickDestinationAddress : (()->())?
+    var onClickPayment : (()->())?
+    
+    var selectedIndex = -1
     
     let bgView : UIImageView = {
         let view = UIImageView()
@@ -38,7 +41,12 @@ class RideNowDetailView: UIView {
     var reloadWithAddData: Bool = false {
         didSet {
             CellCount = reloadWithAddData ? 5 : 0
-            self.tableviewFareDetails.reloadSections(IndexSet(integersIn: 1...1), with: .fade)
+            if CellCount == 5 {
+                self.tableviewFareDetails.reloadData()
+            }else{
+                 self.tableviewFareDetails.reloadSections(IndexSet(integersIn: 1...1), with: .fade)
+            }
+           
         }
     }
     
@@ -70,6 +78,12 @@ class RideNowDetailView: UIView {
         
         self.buttonSourceAddress.addTarget(self, action: #selector(addreeButtonTapped(sender:)), for: .touchUpInside)
         self.buttonDestinationAddress.addTarget(self, action: #selector(addreeButtonTapped(sender:)), for: .touchUpInside)
+        
+        self.localize()
+        
+      
+        
+        
     }
     
     override func layoutSubviews() {
@@ -133,11 +147,6 @@ class RideNowDetailView: UIView {
             }
             
         }
-        
-        //        print("translation: \(translation)")
-        //        print("state: \(state)")
-        //        print("height : \((self.viewMainHeight.frame.height)  - sender.translation(in: sender.view).y)")
-        
     }
     
 }
@@ -145,7 +154,7 @@ class RideNowDetailView: UIView {
 extension RideNowDetailView : UITableViewDelegate, UITableViewDataSource {
     
     func numberOfSections(in tableView: UITableView) -> Int {
-        return 2
+        return 3
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -153,6 +162,8 @@ extension RideNowDetailView : UITableViewDelegate, UITableViewDataSource {
             return 2
         }else if section ==  1  {
             return CellCount
+        }else if section == 2 {
+            return 1
         }
         return 0
     }
@@ -174,8 +185,13 @@ extension RideNowDetailView : UITableViewDelegate, UITableViewDataSource {
         }else if  indexPath.section == 1 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: XIB.Names.CouponTableViewCell, for: indexPath) as? CouponTableViewCell {
                 cell.selectionStyle = .none
+                //let checkMark = cell.accessoryType == .checkmark ? .none : .checkmark
+                
+                cell.accessoryType = self.selectedIndex == indexPath.row ?.checkmark : .none
                 return cell
             }
+        }else if indexPath.section == 2 {
+            
         }
         
         return UITableViewCell()
@@ -193,11 +209,29 @@ extension RideNowDetailView : UITableViewDelegate, UITableViewDataSource {
         
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedIndex = indexPath.row
+        self.reloadWithAddData = true
+    }
+
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+    }
+    
+ 
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let sectionView = Bundle.main.loadNibNamed(XIB.Names.RideNowHeaderSection, owner: self, options: nil)?.first as! RideNowHeaderSection
-        sectionView.onClickCouponApply = {
-            self.reloadWithAddData = self.reloadWithAddData ? false : true
+        if section == 1 {
+            sectionView.setTitle(title: Constants.string.applyCoupon.localize(), imageTitle: #imageLiteral(resourceName: "discount"))
+            sectionView.onClickCouponApply = { [weak self] in
+                self?.reloadWithAddData = self?.reloadWithAddData ?? false ? false : true
+            }
+        }else if section == 2 {
+            sectionView.setTitle(title: Constants.string.payment.localize(), imageTitle: #imageLiteral(resourceName: "salary"))
+            sectionView.onClickCouponApply = { [weak self] in
+               self?.onClickPayment?()
+            }
         }
+      
         return sectionView
     }
     
@@ -206,6 +240,8 @@ extension RideNowDetailView : UITableViewDelegate, UITableViewDataSource {
         case 0:
             return 0
         case 1:
+            return 44
+        case 2:
             return 44
         default:
             return 0
@@ -217,7 +253,7 @@ extension RideNowDetailView : UITableViewDelegate, UITableViewDataSource {
         if scrollView.contentOffset.y <= 0 {
             self.tableviewFareDetails.isScrollEnabled = false
         }else{
-            isTableViewScrollEnable = true
+           isTableViewScrollEnable = true
         }
     }
     

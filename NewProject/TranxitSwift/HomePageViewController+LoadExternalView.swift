@@ -60,12 +60,12 @@ extension HomePageViewController {
             NSLayoutConstraint.activate([(
                     self.rideNowDetailView?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0))!,(self.rideNowDetailView?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0))!,(self.rideNowDetailView?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0))!,])
             
-          self.rideNowDetailView?.heightAnchor.constraint(equalToConstant: (self.view?.frame.height ?? 0.0 ) - 150 ).isActive = true
+          self.rideNowDetailView?.heightAnchor.constraint(equalToConstant: (self.view?.frame.height ?? 0.0 ) - 180 ).isActive = true
 
         }
         
         self.rideNowDetailView?.viewMainHeight = self.view
-        self.rideNowDetailView?.rideNowHeightConstrait = (self.rideNowDetailView?.heightAnchor.constraint(equalToConstant: (self.view?.frame.height ?? 0.0 ) - 150))!
+        self.rideNowDetailView?.rideNowHeightConstrait = (self.rideNowDetailView?.heightAnchor.constraint(equalToConstant: (self.view?.frame.height ?? 0.0 ) - 180))!
 
         self.rideNowDetailView?.onClickCancel = { [weak  self] in
                 self?.isShowFareDetailView = false
@@ -80,6 +80,13 @@ extension HomePageViewController {
             let navigation = UINavigationController(rootViewController: LocationSearchTableViewController())
             self?.presentWithClass(viewController: navigation)
         }
+        
+        self.rideNowDetailView?.onClickPayment = { [weak self] in
+            if  let payment = self?.storyboard?.instantiateViewController(withIdentifier: Storyboard.Ids.PaymentViewController) as? PaymentViewController {
+                let nav = UINavigationController(rootViewController: payment)
+                self?.present(nav, animated: true, completion: nil)
+            }
+        }
     }
     
     func removeRideNowDetailView(){
@@ -89,9 +96,6 @@ extension HomePageViewController {
                 self.rideNowDetailView = nil
             })
         }
-        
     }
-    
-    
     
 }
