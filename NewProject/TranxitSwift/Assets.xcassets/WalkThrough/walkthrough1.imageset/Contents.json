@@ -2,15 +2,17 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "W2.png",
+      "filename" : "seat-conform.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "seat-conform@2x.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
+      "filename" : "seat-conform@3x.png",
       "scale" : "3x"
     }
   ],

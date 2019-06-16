@@ -120,7 +120,7 @@ extension UIViewController {
         guard let keyboard = (info.userInfo?[UIKeyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue else{
             return
         }
-        bottomConstraint?.constant = (keyboard.height) + 50
+        bottomConstraint?.constant = (keyboard.height)  + 10
         self.view.layoutIfNeeded()
     }
     

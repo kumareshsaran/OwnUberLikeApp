@@ -20,9 +20,9 @@ struct Resources {
 extension Resources.Fonts {
     
     enum Weight: String {
-        case light = "ClanPro-NarrNews"
-        case regular = "UberMoveText-Regular"//"ClanPro-Book"
-        case semibold = "ClanPro-NarrBook"
+        case light = "Montserrat-Light"
+        case regular = "Montserrat-Regular"//"ClanPro-Book"
+        case semibold = "Montserrat-SemiBold"
         case italic = "Futura-MediumItalic"
     }
 }

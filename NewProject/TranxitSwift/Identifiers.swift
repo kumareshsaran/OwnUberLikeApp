@@ -23,6 +23,7 @@ struct Storyboard {
     let YourTripsDetailViewController = "YourTripsDetailViewController"
     let PaymentViewController = "PaymentViewController"
     let AddCardViewController = "AddCardViewController"
+    let CountryCodeSelectionViewController = "CountryCodeSelectionViewController"
  
     
 }
@@ -44,6 +45,7 @@ struct XIB {
     let RideNowHeaderSection = "RideNowHeaderSection"
     let CouponTableViewCell = "CouponTableViewCell"
     let AddCardTableViewCell = "AddCardTableViewCell"
+    let CountryCodeTableViewCell = "CountryCodeTableViewCell"
 }
 
 

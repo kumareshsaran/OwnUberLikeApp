@@ -44,7 +44,7 @@ extension UILabel {
             return // handle special case with uitextfields
         }
         if self.tag < 0  {
-            self.textAlignment = (selectedLanguage == .arabic ? .right : .left)
+            //self.textAlignment = (selectedLanguage == .arabic ? .right : .left)
         }
         /*if self.tag == 0 {
          self.textAlignment = (selectedLanguage == .arabic ? .right : .left)
@@ -59,7 +59,7 @@ extension UITextField {
     @objc public func cstmlayoutSubviews() {
         self.cstmlayoutSubviews()
         if self.tag <= 0 {
-            self.textAlignment = (selectedLanguage == .arabic ? .right : .left)
+            //self.textAlignment = (selectedLanguage == .arabic ? .right : .left)
             
         }
     }

@@ -16,9 +16,7 @@ class LaunchViewController: UIViewController {
     @IBOutlet private var buttonSocialLogin : UIButton!
     
     //private weak var viewWalkThrough : WalkThroughView?
-    
-    
-    
+
     var presenter: PostPresenterInputProtocol?
    
     override func viewDidLoad() {
@@ -35,13 +33,9 @@ class LaunchViewController: UIViewController {
         super.viewWillAppear(animated)
         self.navigationController?.isNavigationBarHidden = true
     }
-
-    
 }
 
-
 //MARK:- Methods
-
 extension LaunchViewController {
     
     //MARK:- Initial Loads
@@ -56,15 +50,9 @@ extension LaunchViewController {
        // User.main.loginType = LoginType.manual.rawValue // Set default login as manual
     }
     
-    
-
-
-    
-    
-    
     private func setLocalization(){
         //MARK:- Method Localize Strings
-       buttonSignUp.setTitle(Constants.string.bookYourRide.localize(), for: .normal)
+       buttonSignIn.setTitle(Constants.string.bookYourRide.localize(), for: .normal)
     }
     
     
@@ -94,17 +82,4 @@ extension LaunchViewController : PostViewProtocol {
     func onError(api: Base, message: String, statusCode code: Int) {
         
     }
-    
 }
-
-
-extension LaunchViewController : UIScrollViewDelegate {
-    
-    
-    func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        
-    }
-}
-
-

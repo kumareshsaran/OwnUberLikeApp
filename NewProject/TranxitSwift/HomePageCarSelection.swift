@@ -22,16 +22,17 @@ class HomePageCarSelection: UIView {
     var selectedIndex = -1
     override func draw(_ rect: CGRect) {
         // Drawing code
-        self.CollectionViewCarSelection.delegate = self
-        self.CollectionViewCarSelection.dataSource = self
-        
-        self.CollectionViewCarSelection.register( UINib(nibName: CarSelectionCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CarSelectionCollectionViewCell.identifier)
+//        self.CollectionViewCarSelection.delegate = self
+//        self.CollectionViewCarSelection.dataSource = self
+//
+//        self.CollectionViewCarSelection.register( UINib(nibName: CarSelectionCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CarSelectionCollectionViewCell.identifier)
         
         localize()
     }
     
     override func layoutSubviews() {
-        self.layer.cornerRadius = 15
+       // self.layer.cornerRadius = 15
+        self.addShadow()
     }
  
     
@@ -44,8 +45,8 @@ class HomePageCarSelection: UIView {
     }
     
     private func localize(){
-        self.buttonRideNow.setTitle(Constants.string.rideNow.localize(), for: .normal)
-        self.buttonSchudule.setTitle(Constants.string.scheduleRide.localize(), for: .normal)
+//        self.buttonRideNow.setTitle(Constants.string.rideNow.localize(), for: .normal)
+//        self.buttonSchudule.setTitle(Constants.string.scheduleRide.localize(), for: .normal)
     }
     
 }

@@ -47,6 +47,11 @@
 		0823428A20AD775A0055DDF8 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0823428920AD775A0055DDF8 /* LoaderView.xib */; };
 		0827A9EE225FB5F900C6BD33 /* YourTripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827A9EC225FB5F900C6BD33 /* YourTripsTableViewCell.swift */; };
 		0827A9EF225FB5F900C6BD33 /* YourTripsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0827A9ED225FB5F900C6BD33 /* YourTripsTableViewCell.xib */; };
+		0829AC2822B030D100913FD7 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0829AC2322B030D000913FD7 /* Montserrat-Medium.ttf */; };
+		0829AC2922B030D100913FD7 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0829AC2422B030D000913FD7 /* Montserrat-Bold.ttf */; };
+		0829AC2A22B030D100913FD7 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0829AC2522B030D100913FD7 /* Montserrat-Light.ttf */; };
+		0829AC2B22B030D100913FD7 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0829AC2622B030D100913FD7 /* Montserrat-SemiBold.ttf */; };
+		0829AC2C22B030D100913FD7 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0829AC2722B030D100913FD7 /* Montserrat-Regular.ttf */; };
 		082C441E20E7913A00A7C892 /* FloatyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C441720E7913600A7C892 /* FloatyWindow.swift */; };
 		082C441F20E7913A00A7C892 /* FloatyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C441820E7913700A7C892 /* FloatyItem.swift */; };
 		082C442020E7913A00A7C892 /* FloatyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C441920E7913700A7C892 /* FloatyManager.swift */; };
@@ -80,6 +85,10 @@
 		0848B1942250BFEC00649405 /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0848B1932250BFEC00649405 /* UIViewController+Extension.swift */; };
 		0848B1972250D07500649405 /* HomePageCarSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0848B1962250D07500649405 /* HomePageCarSelection.swift */; };
 		0848B1992250D0A300649405 /* HomePageCarSelection.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0848B1982250D0A300649405 /* HomePageCarSelection.xib */; };
+		084FFC5C22AD1A14007DA333 /* Country.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084FFC5B22AD1A13007DA333 /* Country.swift */; };
+		084FFC6122AD1B79007DA333 /* CountryCodeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084FFC6022AD1B79007DA333 /* CountryCodeSelectionViewController.swift */; };
+		084FFC6522AD20F0007DA333 /* CountryCodeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 084FFC6322AD20F0007DA333 /* CountryCodeTableViewCell.swift */; };
+		084FFC6622AD20F0007DA333 /* CountryCodeTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 084FFC6422AD20F0007DA333 /* CountryCodeTableViewCell.xib */; };
 		0855521520039E91002B01BC /* TextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0855521420039E91002B01BC /* TextField.swift */; };
 		08583BF6211C17DF00B5ABC0 /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08583BF5211C17DF00B5ABC0 /* Store.swift */; };
 		08585F4B2115E94B009DE743 /* ripple.json in Resources */ = {isa = PBXBuildFile; fileRef = 08585F4A2115E94B009DE743 /* ripple.json */; };
@@ -285,6 +294,11 @@
 		0823428920AD775A0055DDF8 /* LoaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
 		0827A9EC225FB5F900C6BD33 /* YourTripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTripsTableViewCell.swift; sourceTree = "<group>"; };
 		0827A9ED225FB5F900C6BD33 /* YourTripsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourTripsTableViewCell.xib; sourceTree = "<group>"; };
+		0829AC2322B030D000913FD7 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		0829AC2422B030D000913FD7 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Bold.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		0829AC2522B030D100913FD7 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Light.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-Light.ttf"; sourceTree = "<group>"; };
+		0829AC2622B030D100913FD7 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-SemiBold.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		0829AC2722B030D100913FD7 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		082C441720E7913600A7C892 /* FloatyWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyWindow.swift; sourceTree = "<group>"; };
 		082C441820E7913700A7C892 /* FloatyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyItem.swift; sourceTree = "<group>"; };
 		082C441920E7913700A7C892 /* FloatyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyManager.swift; sourceTree = "<group>"; };
@@ -321,6 +335,10 @@
 		0848B1932250BFEC00649405 /* UIViewController+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
 		0848B1962250D07500649405 /* HomePageCarSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePageCarSelection.swift; sourceTree = "<group>"; };
 		0848B1982250D0A300649405 /* HomePageCarSelection.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomePageCarSelection.xib; sourceTree = "<group>"; };
+		084FFC5B22AD1A13007DA333 /* Country.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Country.swift; sourceTree = "<group>"; };
+		084FFC6022AD1B79007DA333 /* CountryCodeSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeSelectionViewController.swift; sourceTree = "<group>"; };
+		084FFC6322AD20F0007DA333 /* CountryCodeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeTableViewCell.swift; sourceTree = "<group>"; };
+		084FFC6422AD20F0007DA333 /* CountryCodeTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CountryCodeTableViewCell.xib; sourceTree = "<group>"; };
 		0855521420039E91002B01BC /* TextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextField.swift; sourceTree = "<group>"; };
 		08583BF5211C17DF00B5ABC0 /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
 		08585F4A2115E94B009DE743 /* ripple.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = ripple.json; sourceTree = "<group>"; };
@@ -334,6 +352,7 @@
 		086BAF5F200778330087F15A /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		086BAF6120078A200087F15A /* ErrorMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessages.swift; sourceTree = "<group>"; };
 		086BAF6320078E220087F15A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0873460922B6DF93009633FD /* Mapstyle.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = Mapstyle.json; sourceTree = "<group>"; };
 		087500CF20D7D27600CFA858 /* IntentsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IntentsUI.framework; path = System/Library/Frameworks/IntentsUI.framework; sourceTree = SDKROOT; };
 		0875010020D7D4EC00CFA858 /* SiriIntent.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = SiriIntent.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		0875010220D7D4EC00CFA858 /* IntentHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntentHandler.swift; sourceTree = "<group>"; };
@@ -802,6 +821,7 @@
 		082D1B9420933C5B0000B7C8 /* User Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				084FFC5D22AD1B15007DA333 /* CountryCodeSelectionViewController */,
 				08FF16AC225687D800DED972 /* ProfilePage */,
 				08DE9190224E9B6800BA6C2D /* PhoneNumberVerificationVC */,
 				08813E5B213D505F00830717 /* Config */,
@@ -984,6 +1004,24 @@
 				0803391D2247E0A10090DDB1 /* PhoneNumberViewController.swift */,
 			);
 			name = Email;
+			sourceTree = "<group>";
+		};
+		084FFC5D22AD1B15007DA333 /* CountryCodeSelectionViewController */ = {
+			isa = PBXGroup;
+			children = (
+				084FFC6222AD20D5007DA333 /* XIB */,
+				084FFC6022AD1B79007DA333 /* CountryCodeSelectionViewController.swift */,
+			);
+			path = CountryCodeSelectionViewController;
+			sourceTree = "<group>";
+		};
+		084FFC6222AD20D5007DA333 /* XIB */ = {
+			isa = PBXGroup;
+			children = (
+				084FFC6322AD20F0007DA333 /* CountryCodeTableViewCell.swift */,
+				084FFC6422AD20F0007DA333 /* CountryCodeTableViewCell.xib */,
+			);
+			path = XIB;
 			sourceTree = "<group>";
 		};
 		085361A220B8306F001DD97C /* Passbook */ = {
@@ -1415,6 +1453,11 @@
 		889480221FECEE15006AF5A9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				0829AC2422B030D000913FD7 /* Montserrat-Bold.ttf */,
+				0829AC2522B030D100913FD7 /* Montserrat-Light.ttf */,
+				0829AC2322B030D000913FD7 /* Montserrat-Medium.ttf */,
+				0829AC2722B030D100913FD7 /* Montserrat-Regular.ttf */,
+				0829AC2622B030D100913FD7 /* Montserrat-SemiBold.ttf */,
 				082071B22241610600285548 /* UberMoveText-Regular.otf */,
 				082071B022415BCA00285548 /* RTLExtensions.swift */,
 				082071AB22415B6300285548 /* DeviceDetector.swift */,
@@ -1469,6 +1512,7 @@
 				8871FBD31FE7DC76002335D5 /* Protocols */,
 				8894E2601FE7D9A00097B4B3 /* Common */,
 				8894E2521FE7D7F20097B4B3 /* VIPER */,
+				0873460922B6DF93009633FD /* Mapstyle.json */,
 			);
 			path = TranxitSwift;
 			sourceTree = "<group>";
@@ -1531,6 +1575,7 @@
 		8894E2571FE7D87B0097B4B3 /* Entities */ = {
 			isa = PBXGroup;
 			children = (
+				084FFC5B22AD1A13007DA333 /* Country.swift */,
 				082D1B80209318C30000B7C8 /* User.swift */,
 				0809321920A08E0200B88318 /* Profile.swift */,
 				08D7CCBC213976DC0055C95D /* ChatPush.swift */,
@@ -1806,15 +1851,19 @@
 				08E401CD2282153000EADF1B /* BookForSomeOneTableViewCell.xib in Resources */,
 				088DA996219994EF00ED6E98 /* completed.caf in Resources */,
 				08585F4B2115E94B009DE743 /* ripple.json in Resources */,
+				0829AC2922B030D100913FD7 /* Montserrat-Bold.ttf in Resources */,
 				08FA70A120E3CC1F009B060A /* Localizable.strings in Resources */,
 				0811B17620E7B2AD00B78323 /* ImageCellSender.xib in Resources */,
 				08D62B3B21BA55000066FFD1 /* PickerView.xib in Resources */,
 				088DA9922199930800ED6E98 /* dropped.caf in Resources */,
+				084FFC6622AD20F0007DA333 /* CountryCodeTableViewCell.xib in Resources */,
 				08408AA7227A16E000E13171 /* RideNowDetailView.xib in Resources */,
 				0823428A20AD775A0055DDF8 /* LoaderView.xib in Resources */,
 				0848B1992250D0A300649405 /* HomePageCarSelection.xib in Resources */,
 				0876C50F2283425500C3638A /* CouponTableViewCell.xib in Resources */,
+				0829AC2B22B030D100913FD7 /* Montserrat-SemiBold.ttf in Resources */,
 				0811B17720E7B2AD00B78323 /* ImageCellReciever.xib in Resources */,
+				0829AC2C22B030D100913FD7 /* Montserrat-Regular.ttf in Resources */,
 				08172A2C2180EEE70007D00C /* include in Resources */,
 				08FA708720E3CA99009B060A /* Launch.storyboard in Resources */,
 				08FA70AC20E3E695009B060A /* Main.storyboard in Resources */,
@@ -1824,6 +1873,7 @@
 				08001A0D203C241E0076D324 /* CountryPicker.bundle in Resources */,
 				0811B17920E7B2AD00B78323 /* ChatReciever.xib in Resources */,
 				08172A332180EF940007D00C /* lib in Resources */,
+				0829AC2A22B030D100913FD7 /* Montserrat-Light.ttf in Resources */,
 				085F4DDF21367E5100648591 /* clanpro_medium.otf in Resources */,
 				088DA98C2199700E00ED6E98 /* pickedup.caf in Resources */,
 				08408AAF227A27BD00E13171 /* FareTableViewCell.xib in Resources */,
@@ -1831,6 +1881,7 @@
 				081548FC20A1DEA2004D0F7D /* heart.json in Resources */,
 				085F4DE121367E5100648591 /* clanpro_book.otf in Resources */,
 				088DA9942199944D00ED6E98 /* accepted.caf in Resources */,
+				0829AC2822B030D100913FD7 /* Montserrat-Medium.ttf in Resources */,
 				08D8646C2275F438007D56B4 /* FevortiesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -2077,6 +2128,7 @@
 				0827A9EE225FB5F900C6BD33 /* YourTripsTableViewCell.swift in Sources */,
 				086BAF6220078A200087F15A /* ErrorMessages.swift in Sources */,
 				084577612073614300E890F5 /* AVPlayerHelper.swift in Sources */,
+				084FFC5C22AD1A14007DA333 /* Country.swift in Sources */,
 				08CEA1AB2073B47F00553DE2 /* Application.swift in Sources */,
 				08FF16AE225687ED00DED972 /* ProfilePageViewController.swift in Sources */,
 				38492B362000F65E001830AD /* View.swift in Sources */,
@@ -2151,6 +2203,7 @@
 				082D1B7E2093159A0000B7C8 /* TextFieldEffects.swift in Sources */,
 				081DE6BC228898780029053C /* AddCardViewController.swift in Sources */,
 				082071AD22415B6300285548 /* FontManager.swift in Sources */,
+				084FFC6122AD1B79007DA333 /* CountryCodeSelectionViewController.swift in Sources */,
 				8833895D1FE8FC22006B6C05 /* Identifiers.swift in Sources */,
 				08EBFC86224BF13D00000915 /* TextField+Extension.swift in Sources */,
 				08E281642276280700D872A8 /* SearchResultTableViewCell.swift in Sources */,
@@ -2164,6 +2217,7 @@
 				08B7DC75209A14E0002CF17A /* SideBarTableViewController.swift in Sources */,
 				08EBFC8C224BF61200000915 /* NavigationItem+Exxtension.swift in Sources */,
 				082C442120E7913A00A7C892 /* Floaty.swift in Sources */,
+				084FFC6522AD20F0007DA333 /* CountryCodeTableViewCell.swift in Sources */,
 				083DB1402263C20900C6D1EE /* PaymentViewController.swift in Sources */,
 				8871FBDA1FE7DD7F002335D5 /* WebConstants.swift in Sources */,
 				081DE6C022889AFD0029053C /* AddCardTableViewCell.swift in Sources */,
@@ -2246,7 +2300,7 @@
 				INFOPLIST_FILE = SiriIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appoets.newProject.SiriIntent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appoets.tranxit.newProject.SiriIntent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -2266,7 +2320,7 @@
 				INFOPLIST_FILE = SiriIntent/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.appoets.newProject.SiriIntent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appoets.tranxit.newProject.SiriIntent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 4.0;
@@ -2427,14 +2481,14 @@
 					"\"$(SRCROOT)/TranxitSwift/lib\"/**",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appoets.newProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appoets.tranxit.newProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TranxitSwift/User-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -2479,12 +2533,12 @@
 					"\"$(SRCROOT)/TranxitSwift/lib\"/**",
 					"$(PROJECT_DIR)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.appoets.newProject;
+				PRODUCT_BUNDLE_IDENTIFIER = com.appoets.tranxit.newProject;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "TranxitSwift/User-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;

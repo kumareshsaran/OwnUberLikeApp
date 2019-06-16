@@ -45,6 +45,13 @@ extension UITextField {
         
     }
     
+    func setLeftPadding(point : CGFloat){
+        let paddingView = UIView(frame: CGRect(x: 0, y: 0, width: point, height: self.frame.height))
+        self.leftView = paddingView
+        self.leftViewMode = UITextFieldViewMode.always
+    }
+    
+    
     /*   @IBAction func textFieldDidEndEditings(){
      let layer = CALayer()
      border = layer

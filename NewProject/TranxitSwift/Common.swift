@@ -49,7 +49,20 @@ class Common {
     
     //MARK:- Get Countries from JSON
 
-    
+    class func getCountries()->[Country]{
+        
+        var source = [Country]()
+        
+        if let data = NSData(contentsOfFile: Bundle.main.path(forResource: "countryCodes", ofType: "json") ?? "") as Data? {
+            do{
+                source = try JSONDecoder().decode([Country].self, from: data)
+                
+            } catch let err {
+                print(err.localizedDescription)
+            }
+        }
+        return source
+    }
     
     
     class func getRefreshControl(intableView tableView : UITableView, tintcolorId  : Int = Color.primary.rawValue, attributedText text : NSAttributedString? = nil)->UIRefreshControl{

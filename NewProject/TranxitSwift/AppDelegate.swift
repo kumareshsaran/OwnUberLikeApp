@@ -89,7 +89,7 @@ extension AppDelegate {
         //}
        
         UINavigationBar.appearance().titleTextAttributes = attributes
-      //  attributes.updateValue(UIFont(name:FontCustom.Medium.rawValue, size: 18.0)!, forKey : NSAttributedStringKey.font)
+        attributes.updateValue(UIFont(name:FontCustom.Heavy.rawValue, size: 24.0)!, forKey : NSAttributedStringKey.font)
         if #available(iOS 11.0, *) {
             UINavigationBar.appearance().largeTitleTextAttributes = attributes
         }
@@ -253,4 +253,5 @@ extension AppDelegate: PostViewProtocol{
     
     
 }
+
 

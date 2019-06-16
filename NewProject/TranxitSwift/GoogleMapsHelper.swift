@@ -78,7 +78,7 @@ class GoogleMapsHelper : NSObject {
 
     }
     // Setting Map Style
-    private func setMapStyle(to mapView: GMSMapView?){
+     func setMapStyle(to mapView: GMSMapView?){
         do {
             // Set the map style by passing a valid JSON string.
             if let url = Bundle.main.url(forResource: "Map_style", withExtension: "json") {

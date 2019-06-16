@@ -87,6 +87,10 @@
 		<string>clanpro_medium</string>
 		<string>clanpro_narrnews</string>
 		<string>UberMoveText-Regular</string>
+		<string>Montserrat-Regular</string>
+		<string>Montserrat-Medium</string>
+		<string>Montserrat-SemiBold</string>
+		<string>Montserrat-Light</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

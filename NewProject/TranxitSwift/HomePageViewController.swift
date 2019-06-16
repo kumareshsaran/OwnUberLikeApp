@@ -17,14 +17,19 @@ class HomePageViewController: UIViewController {
     var ViewCarSelection : HomePageCarSelection?
     var rideNowDetailView : RideNowDetailView?
 
+    @IBOutlet weak var viewGetCurrentLocation: UIView!
     @IBOutlet weak var viewAddressSelection: UIView!
     @IBOutlet weak var viewDropLocation: UIView!
     @IBOutlet weak var viewSourceLocation: UIView!
     @IBOutlet weak var viewGoogleMap: GMSMapView!
     
     @IBOutlet weak var imageMenu: UIImageView!
+    @IBOutlet weak var imageCurrentLocation: UIImageView!
     
     var rideNowHeightConstrait = NSLayoutConstraint()
+    
+    var googleMapHelper = GoogleMapsHelper()
+    
     
     var isShowFareDetailView :  Bool = true {
         didSet {
@@ -44,14 +49,23 @@ class HomePageViewController: UIViewController {
         }
     }
     
+    fileprivate func getUserCuttentLocaton() {
+        self.googleMapHelper.getCurrentLocation(onReceivingLocation: { (location) in
+           // self.viewGoogleMap.animate(toLocation: )
+            self.viewGoogleMap.animate(toZoom: 12)
+            self.viewGoogleMap.animate(to: GMSCameraPosition(target: CLLocationCoordinate2D(latitude: location.coordinate.latitude, longitude: location.coordinate.longitude), zoom: 12, bearing: location.coordinate.latitude, viewingAngle: location.coordinate.latitude))
+            self.viewGoogleMap.isMyLocationEnabled = true
+            self.viewGoogleMap.isBuildingsEnabled = true
+            //self.viewGoogleMap.isTrafficEnabled = true
+
+            self.googleMapHelper.setMapStyle(to: self.viewGoogleMap)
+        })
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         initialLoad()
-       
-        
-        self.navigationController?.isNavigationBarHidden = true
-
-        // Do any additional setup after loading the view.
+        getUserCuttentLocaton()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -76,7 +90,21 @@ class HomePageViewController: UIViewController {
         
         self.viewSourceLocation.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(locationTapAction)))
         
+        if #available(iOS 13.0, *) {
+            self.imageCurrentLocation.image = UIImage(systemName: "location")
+        } else {
+            self.imageCurrentLocation.image = #imageLiteral(resourceName: "navigation")
+            // Fallback on earlier versions
+        }
+        
+        self.viewGetCurrentLocation.isUserInteractionEnabled = true
+        self.viewGetCurrentLocation.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(currentLocationTapped)))
+        
             
+    }
+    
+    @IBAction func currentLocationTapped(){
+        getUserCuttentLocaton()
     }
     
     @IBAction func locationTapAction(){
@@ -94,5 +122,11 @@ class HomePageViewController: UIViewController {
     
 }
 
+
+extension HomePageViewController : UIAdaptivePresentationControllerDelegate {
+    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+        .fullScreen
+    }
+}
 
 

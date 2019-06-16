@@ -27,7 +27,7 @@ struct Constants {
     let bookYourRide  = "BOOK YOUR RIDE"
     
     //MARK:- WalkThrough page
-    let walkthroughTitle1 = "High quality ride for your trip"
+    let walkthroughTitle1 = "Ride with new people's & enjoy the trip"
     let walkthroughTitle2 = "High quality ride for your trip"
     let walkthroughTitle3 = "High quality ride for your trip"
     
@@ -93,6 +93,9 @@ struct Constants {
     let rideNow = "Ride now"
     let applyCoupon = "Apply coupon"
     let scheduleRide = "Schedule ride"
+    
+    //MARK:- Country Code selection viewController
+    let selectCountry = "Select a Country"
     
 }
 

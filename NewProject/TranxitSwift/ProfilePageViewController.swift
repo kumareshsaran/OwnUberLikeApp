@@ -37,6 +37,7 @@ class ProfilePageViewController: UITableViewController {
 //        print(#function)
 //    }
     
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.imageViewProfilePicture.makeRoundedCorner()
@@ -47,6 +48,20 @@ class ProfilePageViewController: UITableViewController {
         localize()
         self.imageViewProfilePicture.isUserInteractionEnabled = true
         self.imageViewProfilePicture.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(pickProfileImage)))
+        if #available(iOS 13.0, *) {
+            
+           
+            let configuration = UIImage.SymbolConfiguration(scale: .large)
+            self.imageViewProfilePicture.preferredSymbolConfiguration = configuration
+            self.imageViewProfilePicture.image = UIImage(systemName: "person.crop.circle.fill")
+            self.imageViewProfilePicture.tintColor = .black
+            
+
+            
+        } else {
+            // Fallback on earlier versions
+            self.imageViewProfilePicture.image = #imageLiteral(resourceName: "MenProfile")
+        }
     }
     
     @IBAction func pickProfileImage(){
