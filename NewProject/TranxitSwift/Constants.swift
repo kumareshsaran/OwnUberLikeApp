@@ -94,6 +94,9 @@ struct Constants {
     let applyCoupon = "Apply coupon"
     let scheduleRide = "Schedule ride"
     
+    let niceToMeetYou = "Nice to meet you..."
+    let whereAreYouGoing = "Where are you going?"
+    let searchYourDestination = "Search your destination"
     //MARK:- Country Code selection viewController
     let selectCountry = "Select a Country"
     

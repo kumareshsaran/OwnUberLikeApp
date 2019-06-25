@@ -14,71 +14,45 @@ class HomePageCarSelection: UIView {
     
     @IBOutlet weak var buttonRideNow: UIButton!
     @IBOutlet weak var buttonSchudule: UIButton!
+    @IBOutlet weak var imageSearch: UIImageView!
     
-    // Only override draw() if you perform custom drawing.
+    @IBOutlet weak var labelWhereAreYouGoing: UILabel!
+    @IBOutlet weak var labelNiceToSeeYou: UILabel!
+    @IBOutlet weak var labelSearchDestination: UILabel!
+    
+    @IBOutlet weak var viewSearchLocation: UIView!
+
     // An empty implementation adversely affects performance during animation.
-    var onClickRideNow : (()->())?
-    var onClickschedule : (()->())?
+    var onClickSearchLocation : (()->())?
+
     var selectedIndex = -1
     override func draw(_ rect: CGRect) {
-        // Drawing code
-//        self.CollectionViewCarSelection.delegate = self
-//        self.CollectionViewCarSelection.dataSource = self
-//
-//        self.CollectionViewCarSelection.register( UINib(nibName: CarSelectionCollectionViewCell.identifier, bundle: nil), forCellWithReuseIdentifier: CarSelectionCollectionViewCell.identifier)
-        
         localize()
+        
     }
     
     override func layoutSubviews() {
        // self.layer.cornerRadius = 15
         self.addShadow()
+        initialLoad()
     }
  
-    
-    @IBAction func RideNowAction(_ sender: Any) {
-        self.onClickRideNow?()
-    }
-    
-    @IBAction func schuduleSction(_ sender: Any) {
-        self.onClickschedule?()
-    }
-    
     private func localize(){
-//        self.buttonRideNow.setTitle(Constants.string.rideNow.localize(), for: .normal)
-//        self.buttonSchudule.setTitle(Constants.string.scheduleRide.localize(), for: .normal)
+        self.labelNiceToSeeYou.text = Constants.string.niceToMeetYou.localize()
+        self.labelWhereAreYouGoing.text = Constants.string.whereAreYouGoing.localize()
+        self.labelSearchDestination.text = Constants.string.searchYourDestination.localize()
+    }
+    
+    private func initialLoad(){
+        self.viewSearchLocation.isUserInteractionEnabled = true
+        self.viewSearchLocation.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(viewSearchAction(sender:))))
+        
+        
+    }
+    
+    @objc  func viewSearchAction(sender: UIGestureRecognizer){
+        self.onClickSearchLocation?()
     }
     
 }
 
-extension HomePageCarSelection : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CarSelectionCollectionViewCell.identifier, for: indexPath) as! CarSelectionCollectionViewCell
-        cell.ImageCar.image = self.selectedIndex == indexPath.row ? #imageLiteral(resourceName: "ic_micro_selected") : #imageLiteral(resourceName: "ic_micro")
-        
-        
-            cell.labelETABottomConstaint.constant = self.selectedIndex == indexPath.row ? self.frame.height / 40 : 0
-            cell.labelCarNameTopContraint.constant = self.selectedIndex == indexPath.row ? self.frame.height / 40 : 0
-        
-        cell.labelETATime.text = "5 Min"
-        cell.labelCarName.text = "Auto"
-        
-        print(self.frame.height / 50)
-        return cell
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: self.frame.width / 4 , height: self.frame.height / 1.5)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.selectedIndex = indexPath.row
-        self.CollectionViewCarSelection.reloadData()
-    }
-    
-    
-}

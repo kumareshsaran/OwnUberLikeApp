@@ -47,6 +47,7 @@ extension UIViewController {
     func present(id : String, animation : Bool, fromSB storyBoard: UIStoryboard = Router.main){
         
            let vc = storyBoard.instantiateViewController(withIdentifier: id)
+            vc.modalPresentationStyle = .fullScreen
            self.present(vc, animated: animation, completion: nil)
         
         

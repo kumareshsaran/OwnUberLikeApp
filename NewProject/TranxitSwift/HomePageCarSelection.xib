@@ -28,47 +28,62 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIE-YR-jLZ">
-                    <rect key="frame" x="20" y="105.5" width="335" height="57.5"/>
+                    <rect key="frame" x="20" y="117.5" width="335" height="45.5"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="KIT-tU-xQW">
-                            <rect key="frame" x="10" y="17" width="24" height="24"/>
+                            <rect key="frame" x="10" y="12.5" width="20" height="20"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="24" id="K9n-Jb-inx"/>
-                                <constraint firstAttribute="height" constant="24" id="QSr-1R-FRj"/>
+                                <constraint firstAttribute="width" constant="20" id="K9n-Jb-inx"/>
+                                <constraint firstAttribute="height" constant="20" id="QSr-1R-FRj"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search your destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfH-sT-ZSv">
-                            <rect key="frame" x="44" y="17" width="281" height="24"/>
-                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                            <rect key="frame" x="40" y="0.0" width="285" height="45.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                             <color key="textColor" cocoaTouchSystemColor="opaqueSeparatorColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
-                    <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <color key="backgroundColor" red="0.92549019607843142" green="0.95294117647058818" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="rfH-sT-ZSv" firstAttribute="leading" secondItem="KIT-tU-xQW" secondAttribute="trailing" constant="10" id="83L-UJ-C6N"/>
+                        <constraint firstItem="rfH-sT-ZSv" firstAttribute="top" secondItem="bIE-YR-jLZ" secondAttribute="top" id="PEc-ZD-hzR"/>
+                        <constraint firstAttribute="bottom" secondItem="rfH-sT-ZSv" secondAttribute="bottom" id="Ud4-GJ-QK9"/>
                         <constraint firstAttribute="trailing" secondItem="rfH-sT-ZSv" secondAttribute="trailing" constant="10" id="Ut3-AJ-aUb"/>
                         <constraint firstItem="KIT-tU-xQW" firstAttribute="centerY" secondItem="bIE-YR-jLZ" secondAttribute="centerY" id="VJF-Uc-sCS"/>
                         <constraint firstItem="KIT-tU-xQW" firstAttribute="leading" secondItem="bIE-YR-jLZ" secondAttribute="leading" constant="10" id="iNF-fa-ZXT"/>
                         <constraint firstItem="rfH-sT-ZSv" firstAttribute="centerY" secondItem="KIT-tU-xQW" secondAttribute="centerY" id="oc3-as-DM6"/>
                     </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="5"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                 </view>
             </subviews>
             <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
             <constraints>
                 <constraint firstItem="5qt-8x-mlc" firstAttribute="leading" secondItem="gdq-ca-43n" secondAttribute="leading" constant="20" id="1nv-83-ppY"/>
                 <constraint firstItem="gdq-ca-43n" firstAttribute="trailing" secondItem="bIE-YR-jLZ" secondAttribute="trailing" constant="20" id="6sf-mU-ic3"/>
+                <constraint firstItem="gdq-ca-43n" firstAttribute="trailing" secondItem="bIE-YR-jLZ" secondAttribute="trailing" constant="20" id="HGw-Pd-Kgk"/>
                 <constraint firstItem="5qt-8x-mlc" firstAttribute="top" secondItem="ZIu-8a-bjv" secondAttribute="bottom" constant="20" id="TcD-lf-bu0"/>
                 <constraint firstItem="gdq-ca-43n" firstAttribute="trailing" secondItem="5qt-8x-mlc" secondAttribute="trailing" constant="20" id="Urt-Xb-tmt"/>
+                <constraint firstItem="bIE-YR-jLZ" firstAttribute="height" secondItem="Jxm-ur-uiA" secondAttribute="height" multiplier="1:4" id="Uzr-Ub-GK2"/>
                 <constraint firstItem="ZIu-8a-bjv" firstAttribute="top" secondItem="gdq-ca-43n" secondAttribute="top" constant="20" id="Xfb-F3-lkm"/>
                 <constraint firstItem="bIE-YR-jLZ" firstAttribute="leading" secondItem="gdq-ca-43n" secondAttribute="leading" constant="20" id="bOt-IZ-mPv"/>
-                <constraint firstItem="bIE-YR-jLZ" firstAttribute="top" secondItem="5qt-8x-mlc" secondAttribute="bottom" constant="20" id="l1X-Vd-2pW"/>
                 <constraint firstItem="ZIu-8a-bjv" firstAttribute="leading" secondItem="gdq-ca-43n" secondAttribute="leading" constant="20" id="pMq-zV-nyj"/>
                 <constraint firstItem="gdq-ca-43n" firstAttribute="trailing" secondItem="ZIu-8a-bjv" secondAttribute="trailing" constant="20" id="tzH-0X-UD4"/>
                 <constraint firstItem="gdq-ca-43n" firstAttribute="bottom" secondItem="bIE-YR-jLZ" secondAttribute="bottom" constant="20" id="yPh-zH-qap"/>
             </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <viewLayoutGuide key="safeArea" id="gdq-ca-43n"/>
+            <connections>
+                <outlet property="imageSearch" destination="KIT-tU-xQW" id="9s4-dj-jyL"/>
+                <outlet property="labelNiceToSeeYou" destination="ZIu-8a-bjv" id="7yL-jQ-AxR"/>
+                <outlet property="labelSearchDestination" destination="rfH-sT-ZSv" id="u0I-q3-HHm"/>
+                <outlet property="labelWhereAreYouGoing" destination="5qt-8x-mlc" id="bwr-To-aft"/>
+                <outlet property="viewSearchLocation" destination="bIE-YR-jLZ" id="LOk-ca-6Et"/>
+            </connections>
             <point key="canvasLocation" x="136.80000000000001" y="722.78860569715152"/>
         </view>
     </objects>

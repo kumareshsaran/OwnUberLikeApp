@@ -24,19 +24,18 @@ extension HomePageViewController {
             self.ViewCarSelection?.translatesAutoresizingMaskIntoConstraints = false
             
             NSLayoutConstraint.activate([
-                (self.ViewCarSelection?.leadingAnchor.constraint(equalTo: self.viewGoogleMap.leadingAnchor, constant: 0))!,(self.ViewCarSelection?.trailingAnchor.constraint(equalTo: self.viewGoogleMap.trailingAnchor, constant: 0))!,(self.ViewCarSelection?.heightAnchor.constraint(equalTo: self.viewGoogleMap.heightAnchor, multiplier: 0.3))!,(self.ViewCarSelection?.bottomAnchor.constraint(equalTo: self.viewGoogleMap.bottomAnchor, constant: 0))!,
+                (self.ViewCarSelection?.leadingAnchor.constraint(equalTo: self.viewGoogleMap.leadingAnchor, constant: 0))!,
+                (self.ViewCarSelection?.trailingAnchor.constraint(equalTo: self.viewGoogleMap.trailingAnchor, constant: 0))!,
+                (self.ViewCarSelection?.heightAnchor.constraint(equalToConstant: (self.ViewCarSelection?.frame.height)!))!,
+                (self.ViewCarSelection?.bottomAnchor.constraint(equalTo: self.viewGoogleMap.bottomAnchor, constant: 0))!,
                 ])
             
             self.viewGoogleMap.addSubview(self.ViewCarSelection!)
             
             self.ViewCarSelection?.layer.cornerRadius = 15
             
-            self.ViewCarSelection?.onClickRideNow = { [weak self] in
-                self?.isShowFareDetailView = true
-            }
-            
-            self.ViewCarSelection?.onClickschedule = { [weak self] in
-               // self?.isShowFareDetailView = false
+            self.ViewCarSelection?.onClickSearchLocation = {
+                self.present(id: Storyboard.Ids.LocationSearchTableViewController, animation: true)
             }
             
         }else{

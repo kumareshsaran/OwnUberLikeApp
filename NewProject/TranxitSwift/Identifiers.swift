@@ -24,6 +24,7 @@ struct Storyboard {
     let PaymentViewController = "PaymentViewController"
     let AddCardViewController = "AddCardViewController"
     let CountryCodeSelectionViewController = "CountryCodeSelectionViewController"
+    let LocationSearchTableViewController = "LocationSearchTableViewController"
  
     
 }

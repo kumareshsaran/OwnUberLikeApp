@@ -26,6 +26,7 @@ class HomePageViewController: UIViewController {
     @IBOutlet weak var imageMenu: UIImageView!
     @IBOutlet weak var imageCurrentLocation: UIImageView!
     
+    @IBOutlet weak var viewSideMenu: UIView!
     var rideNowHeightConstrait = NSLayoutConstraint()
     
     var googleMapHelper = GoogleMapsHelper()
@@ -99,6 +100,8 @@ class HomePageViewController: UIViewController {
         
         self.viewGetCurrentLocation.isUserInteractionEnabled = true
         self.viewGetCurrentLocation.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(currentLocationTapped)))
+        
+        [self.viewGetCurrentLocation,self.viewSideMenu].forEach({$0?.makeRoundedCorner()})
         
             
     }
