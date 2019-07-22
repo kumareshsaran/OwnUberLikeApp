@@ -51,10 +51,10 @@ class ProfilePageViewController: UITableViewController {
         if #available(iOS 13.0, *) {
             
            
-            let configuration = UIImage.SymbolConfiguration(scale: .large)
-            self.imageViewProfilePicture.preferredSymbolConfiguration = configuration
-            self.imageViewProfilePicture.image = UIImage(systemName: "person.crop.circle.fill")
-            self.imageViewProfilePicture.tintColor = .black
+//            let configuration = UIImage.SymbolConfiguration(scale: .large)
+//            self.imageViewProfilePicture.preferredSymbolConfiguration = configuration
+//            self.imageViewProfilePicture.image = UIImage(systemName: "person.crop.circle.fill")
+//            self.imageViewProfilePicture.tintColor = .black
             
 
             

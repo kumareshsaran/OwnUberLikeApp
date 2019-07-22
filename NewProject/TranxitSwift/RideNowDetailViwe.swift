@@ -88,8 +88,7 @@ class RideNowDetailView: UIView {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        //self.backgroundColor = .white
-        self.viewMain.backgroundColor = .white
+    
     }
     
     private func localize(){

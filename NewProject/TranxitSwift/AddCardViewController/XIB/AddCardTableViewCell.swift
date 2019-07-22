@@ -15,7 +15,7 @@ class AddCardTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        labelTitle.text = "Card number"
+        
         textFiledCardNumber.becomeFirstResponder()
     }
 
@@ -23,6 +23,20 @@ class AddCardTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func setData(indexPath : IndexPath){
+        switch indexPath.row {
+        case 0:
+            labelTitle.text = "Card number"
+        case 1:
+            labelTitle.text = "Exp. date"
+        case 2:
+            labelTitle.text = "Cvv"
+        default:
+            print("")
+        }
+        
     }
     
 }

@@ -53,8 +53,8 @@ extension AddCardViewController : UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if let cell = tableView.dequeueReusableCell(withIdentifier: XIB.Names.AddCardTableViewCell, for: indexPath) as? AddCardTableViewCell{
-            
-             return cell
+            cell.setData(indexPath: indexPath)
+            return cell
         }
         
        return UITableViewCell()

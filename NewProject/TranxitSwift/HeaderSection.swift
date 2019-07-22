@@ -18,6 +18,7 @@ class HeaderSection: UIView {
         self.backgroundColor = .white
         self.addSubview(self.labelTitle)
         self.labelTitle.translatesAutoresizingMaskIntoConstraints = false
+       
         NSLayoutConstraint.activate([self.labelTitle.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 16),self.labelTitle.centerYAnchor.constraint(equalTo: self.centerYAnchor, constant: 0),self.labelTitle.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -16)])
         self.labelTitle.textColor = UIColor.lightGray
         

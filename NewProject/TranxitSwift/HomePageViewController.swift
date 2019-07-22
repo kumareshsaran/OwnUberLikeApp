@@ -68,7 +68,21 @@ class HomePageViewController: UIViewController {
         initialLoad()
         getUserCuttentLocaton()
     }
-    
+     override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+         super.traitCollectionDidChange(previousTraitCollection)
+
+        if #available(iOS 13.0, *) {
+            let userInterfaceStyle = traitCollection.userInterfaceStyle
+            if userInterfaceStyle == .light {
+               // self.navigationController?.navigationBar.tintColor = .black
+            }else{
+                //self.navigationController?.navigationBar.tintColor = .black
+            }
+        } else {
+            // Fallback on earlier versions
+        } // Either .unspecified, .light, or .dark
+         // Update your user interface based on the appearance
+     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.navigationController?.isNavigationBarHidden = true
@@ -92,7 +106,7 @@ class HomePageViewController: UIViewController {
         self.viewSourceLocation.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(locationTapAction)))
         
         if #available(iOS 13.0, *) {
-            self.imageCurrentLocation.image = UIImage(systemName: "location")
+          //  self.imageCurrentLocation.image = UIImage(systemName: "location")
         } else {
             self.imageCurrentLocation.image = #imageLiteral(resourceName: "navigation")
             // Fallback on earlier versions
@@ -126,10 +140,10 @@ class HomePageViewController: UIViewController {
 }
 
 
-extension HomePageViewController : UIAdaptivePresentationControllerDelegate {
-    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
-        .fullScreen
-    }
-}
+//extension HomePageViewController : UIAdaptivePresentationControllerDelegate {
+//    func adaptivePresentationStyle(for controller: UIPresentationController) -> UIModalPresentationStyle {
+//        .
+//    }
+//}
 
 

@@ -1,8 +1,25 @@
 {
   "symbols" : [
     {
+      "idiom" : "universal"
+    },
+    {
       "idiom" : "universal",
-      "filename" : "magnifyingglass.svg"
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "light"
+        }
+      ]
+    },
+    {
+      "idiom" : "universal",
+      "appearances" : [
+        {
+          "appearance" : "luminosity",
+          "value" : "dark"
+        }
+      ]
     }
   ],
   "info" : {

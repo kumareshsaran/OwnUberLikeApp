@@ -33,7 +33,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         self.window = UIWindow(frame: UIScreen.main.bounds)
         FirebaseApp.configure()
-        self.appearence()
+       self.appearence()
         setLocalization(language: .english)
         RTL.ChangeLocalization()
         self.google()
@@ -53,6 +53,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
          return true
     }
+    
+    
     
     func applicationDidBecomeActive(_ application: UIApplication) {
         
@@ -79,21 +81,26 @@ extension AppDelegate {
     
     // MARK:- Appearence
     private func appearence() {
-        
-        UINavigationBar.appearance().barTintColor = .white
-      //  UINavigationBar.appearance().tintColor = .darkGray
+        var navigationTitleColor = UIColor.gray
+    
+        //UINavigationBar.appearance().barTintColor = .black// Fallback on earlier versions
+        //UINavigationBar.appearance().tintColor = .darkGray
         var attributes = [NSAttributedStringKey : Any]()
-        attributes.updateValue(UIColor.black, forKey: .foregroundColor)
-       // DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-             attributes.updateValue(UIFont(name: FontCustom.Heavy.rawValue, size: 18.0)!, forKey : NSAttributedStringKey.font)
-        //}
-       
+        /*if #available(iOS 13.0, *) {
+            navigationTitleColor = UITraitCollection().userInterfaceStyle == .light ? UIColor.black : UIColor.white
+        } else {
+            // Fallback on earlier versions
+        }
+        attributes.updateValue(navigationTitleColor, forKey: .foregroundColor)*/
+
+        attributes.updateValue(UIFont(name: FontCustom.Heavy.rawValue, size: 18.0)!, forKey : NSAttributedStringKey.font)
+        UINavigationBar.appearance().isTranslucent = true
+        
         UINavigationBar.appearance().titleTextAttributes = attributes
         attributes.updateValue(UIFont(name:FontCustom.Heavy.rawValue, size: 24.0)!, forKey : NSAttributedStringKey.font)
         if #available(iOS 11.0, *) {
             UINavigationBar.appearance().largeTitleTextAttributes = attributes
         }
-        
         UIPageControl.appearance().pageIndicatorTintColor = .lightGray
         UIPageControl.appearance().currentPageIndicatorTintColor = .gray
         UIPageControl.appearance().backgroundColor = .clear

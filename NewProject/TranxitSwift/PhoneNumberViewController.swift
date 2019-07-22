@@ -101,7 +101,7 @@ class PhoneNumberViewController: UIViewController {
 //MARK:- UITextFieldDelegate
 extension PhoneNumberViewController : UITextFieldDelegate {
     func textFieldDidBeginEditing(_ textField: UITextField) {
-        textField.backgroundColor = #colorLiteral(red: 0.9254901961, green: 0.9529411765, blue: 0.9921568627, alpha: 1)
+        textField.backgroundColor = #colorLiteral(red: 0.8354559541, green: 0.9398162365, blue: 0.9843896031, alpha: 1)
         textField.setLeftPadding(point: CGFloat(16.00))
         if textField == self.textfiledCC {
              let countryCodeVC = CountryCodeSelectionViewController()
@@ -112,7 +112,11 @@ extension PhoneNumberViewController : UITextFieldDelegate {
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
-        textField.backgroundColor = UIColor.white
+        if #available(iOS 13.0, *) {
+            textField.backgroundColor = UIColor.systemBackground
+        } else {
+            // Fallback on earlier versions
+        }
     }
     
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {

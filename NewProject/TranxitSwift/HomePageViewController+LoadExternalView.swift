@@ -11,31 +11,27 @@ import  UIKit
 
 extension HomePageViewController {
     
-    
-    
-    
-    func loadCarSelectionView() {
+    func loadCarSelectionView() {//MARK:- load car category selection view
         if let carSelection = Bundle.main.loadNibNamed(XIB.Names.HomePageCarSelection, owner: self, options: nil),
             self.ViewCarSelection == nil  {
             
             self.ViewCarSelection = carSelection.first as? HomePageCarSelection
-            self.viewGoogleMap.addSubview(self.ViewCarSelection!)
+            self.view.addSubview(self.ViewCarSelection!)
             
             self.ViewCarSelection?.translatesAutoresizingMaskIntoConstraints = false
             
             NSLayoutConstraint.activate([
-                (self.ViewCarSelection?.leadingAnchor.constraint(equalTo: self.viewGoogleMap.leadingAnchor, constant: 0))!,
-                (self.ViewCarSelection?.trailingAnchor.constraint(equalTo: self.viewGoogleMap.trailingAnchor, constant: 0))!,
+                (self.ViewCarSelection?.leadingAnchor.constraint(equalTo: self.view.leadingAnchor, constant: 0))!,
+                (self.ViewCarSelection?.trailingAnchor.constraint(equalTo: self.view.trailingAnchor, constant: 0))!,
                 (self.ViewCarSelection?.heightAnchor.constraint(equalToConstant: (self.ViewCarSelection?.frame.height)!))!,
-                (self.ViewCarSelection?.bottomAnchor.constraint(equalTo: self.viewGoogleMap.bottomAnchor, constant: 0))!,
+                (self.ViewCarSelection?.bottomAnchor.constraint(equalTo: self.view.bottomAnchor, constant: 0))!,
                 ])
-            
-            self.viewGoogleMap.addSubview(self.ViewCarSelection!)
+          //  self.view.addSubview(self.ViewCarSelection!)
             
             self.ViewCarSelection?.layer.cornerRadius = 15
-            
             self.ViewCarSelection?.onClickSearchLocation = {
-                self.present(id: Storyboard.Ids.LocationSearchTableViewController, animation: true)
+             //   self.present(id: Storyboard.Ids.LocationSearchTableViewController, animation: true,presentationStyle: .popover)
+                self.loadRideNowDetailView()
             }
             
         }else{
@@ -61,10 +57,16 @@ extension HomePageViewController {
             
           self.rideNowDetailView?.heightAnchor.constraint(equalToConstant: (self.view?.frame.height ?? 0.0 ) - 180 ).isActive = true
 
+            if #available(iOS 13.0, *) {
+                        self.rideNowDetailView?.backgroundColor = .systemBackground
+                    } else {
+                        // Fallback on earlier versions
+                    }
         }
         
         self.rideNowDetailView?.viewMainHeight = self.view
         self.rideNowDetailView?.rideNowHeightConstrait = (self.rideNowDetailView?.heightAnchor.constraint(equalToConstant: (self.view?.frame.height ?? 0.0 ) - 180))!
+        
 
         self.rideNowDetailView?.onClickCancel = { [weak  self] in
                 self?.isShowFareDetailView = false
@@ -73,6 +75,7 @@ extension HomePageViewController {
         self.rideNowDetailView?.onClickSourceAddress = { [weak self] in
             let navigation = UINavigationController(rootViewController: LocationSearchTableViewController())
             self?.presentWithClass(viewController: navigation)
+            
         }
         
         self.rideNowDetailView?.onClickDestinationAddress = { [weak self] in
@@ -88,7 +91,7 @@ extension HomePageViewController {
         }
     }
     
-    func removeRideNowDetailView(){
+    func removeRideNowDetailView(){ //MARK:- remove ride  now detail view
         self.rideNowDetailView?.showAnimateView(self.rideNowDetailView!, isShow: false, direction: .top)
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
             self.rideNowDetailView?.dismissView(onCompletion: {

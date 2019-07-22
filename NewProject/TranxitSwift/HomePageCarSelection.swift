@@ -12,8 +12,6 @@ class HomePageCarSelection: UIView {
 
     @IBOutlet weak var CollectionViewCarSelection: UICollectionView!
     
-    @IBOutlet weak var buttonRideNow: UIButton!
-    @IBOutlet weak var buttonSchudule: UIButton!
     @IBOutlet weak var imageSearch: UIImageView!
     
     @IBOutlet weak var labelWhereAreYouGoing: UILabel!

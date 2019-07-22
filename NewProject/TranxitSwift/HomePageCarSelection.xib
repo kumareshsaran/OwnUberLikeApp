@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14810.11" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14845" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14766.13"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14799.2"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
         <capability name="iOS 13.0 system colors" minToolsVersion="11.0"/>
@@ -12,7 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" restorationIdentifier="HomePageCarSelection" id="Jxm-ur-uiA" customClass="HomePageCarSelection" customModule="User" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="183"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="212"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nice to see you..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZIu-8a-bjv">
@@ -28,27 +28,26 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bIE-YR-jLZ">
-                    <rect key="frame" x="20" y="117.5" width="335" height="45.5"/>
+                    <rect key="frame" x="20" y="139" width="335" height="53"/>
                     <subviews>
                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="search" translatesAutoresizingMaskIntoConstraints="NO" id="KIT-tU-xQW">
-                            <rect key="frame" x="10" y="12.5" width="20" height="20"/>
+                            <rect key="frame" x="10" y="16.5" width="20" height="20"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="20" id="K9n-Jb-inx"/>
                                 <constraint firstAttribute="height" constant="20" id="QSr-1R-FRj"/>
                             </constraints>
                         </imageView>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search your destination" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rfH-sT-ZSv">
-                            <rect key="frame" x="40" y="0.0" width="285" height="45.5"/>
+                            <rect key="frame" x="40" y="17" width="285" height="19.5"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
                             <color key="textColor" cocoaTouchSystemColor="opaqueSeparatorColor"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.92549019607843142" green="0.95294117647058818" blue="0.99215686274509807" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="tintColor" red="0.1764705882352941" green="0.69019607843137254" blue="0.91764705882352937" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="rfH-sT-ZSv" firstAttribute="leading" secondItem="KIT-tU-xQW" secondAttribute="trailing" constant="10" id="83L-UJ-C6N"/>
-                        <constraint firstItem="rfH-sT-ZSv" firstAttribute="top" secondItem="bIE-YR-jLZ" secondAttribute="top" id="PEc-ZD-hzR"/>
-                        <constraint firstAttribute="bottom" secondItem="rfH-sT-ZSv" secondAttribute="bottom" id="Ud4-GJ-QK9"/>
                         <constraint firstAttribute="trailing" secondItem="rfH-sT-ZSv" secondAttribute="trailing" constant="10" id="Ut3-AJ-aUb"/>
                         <constraint firstItem="KIT-tU-xQW" firstAttribute="centerY" secondItem="bIE-YR-jLZ" secondAttribute="centerY" id="VJF-Uc-sCS"/>
                         <constraint firstItem="KIT-tU-xQW" firstAttribute="leading" secondItem="bIE-YR-jLZ" secondAttribute="leading" constant="10" id="iNF-fa-ZXT"/>
@@ -65,7 +64,6 @@
             <constraints>
                 <constraint firstItem="5qt-8x-mlc" firstAttribute="leading" secondItem="gdq-ca-43n" secondAttribute="leading" constant="20" id="1nv-83-ppY"/>
                 <constraint firstItem="gdq-ca-43n" firstAttribute="trailing" secondItem="bIE-YR-jLZ" secondAttribute="trailing" constant="20" id="6sf-mU-ic3"/>
-                <constraint firstItem="gdq-ca-43n" firstAttribute="trailing" secondItem="bIE-YR-jLZ" secondAttribute="trailing" constant="20" id="HGw-Pd-Kgk"/>
                 <constraint firstItem="5qt-8x-mlc" firstAttribute="top" secondItem="ZIu-8a-bjv" secondAttribute="bottom" constant="20" id="TcD-lf-bu0"/>
                 <constraint firstItem="gdq-ca-43n" firstAttribute="trailing" secondItem="5qt-8x-mlc" secondAttribute="trailing" constant="20" id="Urt-Xb-tmt"/>
                 <constraint firstItem="bIE-YR-jLZ" firstAttribute="height" secondItem="Jxm-ur-uiA" secondAttribute="height" multiplier="1:4" id="Uzr-Ub-GK2"/>
@@ -84,7 +82,7 @@
                 <outlet property="labelWhereAreYouGoing" destination="5qt-8x-mlc" id="bwr-To-aft"/>
                 <outlet property="viewSearchLocation" destination="bIE-YR-jLZ" id="LOk-ca-6Et"/>
             </connections>
-            <point key="canvasLocation" x="136.80000000000001" y="722.78860569715152"/>
+            <point key="canvasLocation" x="136.80000000000001" y="709.7451274362819"/>
         </view>
     </objects>
     <resources>

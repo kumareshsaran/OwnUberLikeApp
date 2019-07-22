@@ -8,6 +8,8 @@ private var constraintValue : CGFloat = 0
 
 extension UIViewController {
     
+
+    
     func setPresenter(){
         
         if let view = self as? PostViewProtocol {
@@ -44,10 +46,10 @@ extension UIViewController {
     
     //MARK:- Present
     
-    func present(id : String, animation : Bool, fromSB storyBoard: UIStoryboard = Router.main){
+    func present(id : String, animation : Bool, fromSB storyBoard: UIStoryboard = Router.main,presentationStyle: UIModalPresentationStyle = .fullScreen){
         
            let vc = storyBoard.instantiateViewController(withIdentifier: id)
-            vc.modalPresentationStyle = .fullScreen
+            vc.modalPresentationStyle = presentationStyle
            self.present(vc, animated: animation, completion: nil)
         
         

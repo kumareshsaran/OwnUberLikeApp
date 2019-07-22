@@ -17,22 +17,32 @@ class LocationSearchTableViewController: UIViewController {
     private let fevTitle = [Constants.string.home.localize(),Constants.string.work.localize()]
     // let manager = PopMenuManager.default
     
-    private var searchController : UISearchBar = {
-        
+    lazy private var searchController : UISearchBar = {
         let search = UISearchBar()
         search.placeholder = Constants.string.searchYourAddress.localize()
         search.tintColor = #colorLiteral(red: 0.2039215686, green: 0.4705882353, blue: 0.9647058824, alpha: 1)
-        search.barTintColor = .white
-        search.backgroundImage = UIImage()
-        return search
+        if #available(iOS 13.0, *) {
+            search.barTintColor = .systemBackground
+            search.backgroundColor = .systemBackground
+            search.searchTextField.backgroundColor = .systemBackground
+        } else {
+            search.barTintColor = .white
+            search.backgroundColor = .white // Fallback on earlier versions
+        }
+        let bgImage = UIImageView()
+        if #available(iOS 13.0, *) {
+            bgImage.backgroundColor = .clear
+        } else {
+            bgImage.backgroundColor = .clear// Fallback on earlier versions
+        }
+        search.backgroundImage = bgImage.image
         
+        return search
     }()
     
-    private var tableviewAutoComplete : UITableView = {
-        
+   lazy private var tableviewAutoComplete : UITableView = {
         let tableview = UITableView(frame: CGRect.zero, style: .grouped)
         return tableview
-        
     }()
     
     private var googlePlacesHelper : GooglePlacesHelper?
@@ -76,12 +86,16 @@ class LocationSearchTableViewController: UIViewController {
         
         if #available(iOS 11.0, *) {
             
-            NSLayoutConstraint.activate([self.searchBgView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),self.searchBgView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),self.searchBgView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),self.searchBgView.heightAnchor.constraint(equalToConstant: 40)])
+            NSLayoutConstraint.activate([self.searchBgView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 0),self.searchBgView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),self.searchBgView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),self.searchBgView.heightAnchor.constraint(equalToConstant: 60)])
             
         } else {
             // Fallback on earlier versions
         }
-        self.searchBgView.backgroundColor = .white
+        if #available(iOS 13.0, *) {
+            self.searchBgView.backgroundColor = .systemBackground
+        } else {
+            self.searchBgView.backgroundColor = .white// Fallback on earlier versions
+        }
         
         NSLayoutConstraint.activate(
             [self.searchController.leadingAnchor.constraint(equalTo: self.searchBgView.leadingAnchor, constant: 16),self.searchController.trailingAnchor.constraint(equalTo: self.searchBgView.trailingAnchor, constant: -16),self.searchController.heightAnchor.constraint(equalToConstant: 20),self.searchController.centerXAnchor.constraint(equalTo: self.searchBgView.centerXAnchor, constant: 0),self.searchController.centerYAnchor.constraint(equalTo: self.searchBgView.centerYAnchor, constant: 0)])
@@ -89,7 +103,13 @@ class LocationSearchTableViewController: UIViewController {
         NSLayoutConstraint.activate(
             [self.tableviewAutoComplete.topAnchor.constraint(equalTo: searchBgView.bottomAnchor, constant: 0),self.tableviewAutoComplete.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 0),self.tableviewAutoComplete.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0),self.tableviewAutoComplete.bottomAnchor.constraint(equalTo: self.view.bottomAnchor)])
         
-        self.view.backgroundColor = .white
+        if #available(iOS 13.0, *) {
+            self.view.backgroundColor = UIColor.systemBackground
+        } else {
+            // Fallback on earlier versions
+            self.view.backgroundColor = UIColor.white
+        }
+        
         
         // self.navigationItem.titleView = searchController
         self.tableviewAutoComplete.delegate = self
@@ -166,8 +186,6 @@ extension LocationSearchTableViewController : UISearchBarDelegate {
         self.getPredications(from: searchText)
     }
     
-   
-    
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         self.searchController.endEditing(true)
     }
@@ -192,17 +210,25 @@ extension LocationSearchTableViewController : UITableViewDelegate, UITableViewDa
         let header = HeaderSection()
         let headerTitle = section == 0 ? Constants.string.fevroties.localize() : Constants.string.address.localize()
         header.setTitle(title: headerTitle)
-        header.backgroundColor = UIColor.groupTableViewBackground
+        if #available(iOS 13.0, *) {
+            header.backgroundColor = UIColor.systemBackground
+        } else {
+            header.backgroundColor = UIColor.systemGray// Fallback on earlier versions
+        }
         
         return header
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 25
+        return 30
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 60
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        present(self.popMenuTextAndImage(), animated: true, completion: nil)
+        //present(self.popMenuTextAndImage(), animated: true, completion: nil)
         
     }
     

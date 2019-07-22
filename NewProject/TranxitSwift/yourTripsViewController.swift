@@ -38,6 +38,12 @@ class yourTripsViewController: UIViewController {
     let segmentedControl: UISegmentedControl = {
         let sc = UISegmentedControl(items: [Constants.string.past.localize(), Constants.string.upcoming.localize()])
         sc.selectedSegmentIndex = 0
+        if #available(iOS 13.0, *) {
+            sc.backgroundColor = .systemBackground
+        } else {
+            sc.backgroundColor = .white
+            // Fallback on earlier versions
+        }
        // sc.tintColor = .default
         sc.addTarget(self, action: #selector(handleSegmentChange), for: .valueChanged)
         return sc
@@ -130,7 +136,11 @@ extension yourTripsViewController : UITableViewDataSource {
         return cell
     }
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 150
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

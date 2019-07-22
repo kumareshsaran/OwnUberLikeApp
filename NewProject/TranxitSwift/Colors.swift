@@ -53,6 +53,13 @@ enum Color : Int {
     
     
 }
+func systemBlackColor()->UIColor{
+    if #available(iOS 13.0, *) {
+               return UIColor.systemBackground
+           } else {
+               return UIColor.black// Fallback on earlier versions
+           }
+}
 
 extension UIColor {
     
@@ -63,17 +70,22 @@ extension UIColor {
     
     // Secondary Color
     static var secondary : UIColor {
-        return #colorLiteral(red: 0.06274510175, green: 0, blue: 0.1921568662, alpha: 1) //UIColor(red: 238/255, green: 98/255, blue: 145/255, alpha: 1)
-    }
-    
-    // Secondary Color
-    static var textColor : UIColor {
         return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) //UIColor(red: 238/255, green: 98/255, blue: 145/255, alpha: 1)
     }
     
     // Secondary Color
+    static var textColor : UIColor {
+        if #available(iOS 13.0, *) {
+                   return UIColor.systemBackground
+               } else {
+                   return UIColor.black// Fallback on earlier versions
+               }
+        //return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) //UIColor(red: 238/255, green: 98/255, blue: 145/255, alpha: 1)
+    }
+    
+    // Secondary Color
     static var buttonBg : UIColor {
-        return #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1) //UIColor(red: 38/255, green: 118/255, blue: 188/255, alpha: 1)
+        systemBlackColor()//UIColor(red: 38/255, green: 118/255, blue: 188/255, alpha: 1)
     }
     
     static var labelTextColor : UIColor {
@@ -81,25 +93,12 @@ extension UIColor {
     }
     
     static var buttonTextColor : UIColor {
-        return #colorLiteral(red: 0.9607843161, green: 0.7058823705, blue: 0.200000003, alpha: 1) //UIColor(red: 38/255, green: 118/255, blue: 188/255, alpha: 1)
+        return UIColor.systemBlue //UIColor(red: 38/255, green: 118/255, blue: 188/255, alpha: 1)
     }
     
     static var imageTintColor : UIColor {
         return #colorLiteral(red: 0.6000000238, green: 0.6000000238, blue: 0.6000000238, alpha: 1) //UIColor(red: 38/255, green: 118/255, blue: 188/255, alpha: 1)
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
- 
     
     func UInt()->UInt32{
         

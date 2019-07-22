@@ -47,11 +47,6 @@
 		0823428A20AD775A0055DDF8 /* LoaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0823428920AD775A0055DDF8 /* LoaderView.xib */; };
 		0827A9EE225FB5F900C6BD33 /* YourTripsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0827A9EC225FB5F900C6BD33 /* YourTripsTableViewCell.swift */; };
 		0827A9EF225FB5F900C6BD33 /* YourTripsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0827A9ED225FB5F900C6BD33 /* YourTripsTableViewCell.xib */; };
-		0829AC2822B030D100913FD7 /* Montserrat-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0829AC2322B030D000913FD7 /* Montserrat-Medium.ttf */; };
-		0829AC2922B030D100913FD7 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0829AC2422B030D000913FD7 /* Montserrat-Bold.ttf */; };
-		0829AC2A22B030D100913FD7 /* Montserrat-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0829AC2522B030D100913FD7 /* Montserrat-Light.ttf */; };
-		0829AC2B22B030D100913FD7 /* Montserrat-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0829AC2622B030D100913FD7 /* Montserrat-SemiBold.ttf */; };
-		0829AC2C22B030D100913FD7 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0829AC2722B030D100913FD7 /* Montserrat-Regular.ttf */; };
 		082C441E20E7913A00A7C892 /* FloatyWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C441720E7913600A7C892 /* FloatyWindow.swift */; };
 		082C441F20E7913A00A7C892 /* FloatyItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C441820E7913700A7C892 /* FloatyItem.swift */; };
 		082C442020E7913A00A7C892 /* FloatyManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 082C441920E7913700A7C892 /* FloatyManager.swift */; };
@@ -294,11 +289,6 @@
 		0823428920AD775A0055DDF8 /* LoaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoaderView.xib; sourceTree = "<group>"; };
 		0827A9EC225FB5F900C6BD33 /* YourTripsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YourTripsTableViewCell.swift; sourceTree = "<group>"; };
 		0827A9ED225FB5F900C6BD33 /* YourTripsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = YourTripsTableViewCell.xib; sourceTree = "<group>"; };
-		0829AC2322B030D000913FD7 /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Medium.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-Medium.ttf"; sourceTree = "<group>"; };
-		0829AC2422B030D000913FD7 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Bold.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-Bold.ttf"; sourceTree = "<group>"; };
-		0829AC2522B030D100913FD7 /* Montserrat-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Light.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-Light.ttf"; sourceTree = "<group>"; };
-		0829AC2622B030D100913FD7 /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-SemiBold.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
-		0829AC2722B030D100913FD7 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Montserrat-Regular.ttf"; path = "../../../../../../Downloads/Montserrat/Montserrat-Regular.ttf"; sourceTree = "<group>"; };
 		082C441720E7913600A7C892 /* FloatyWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyWindow.swift; sourceTree = "<group>"; };
 		082C441820E7913700A7C892 /* FloatyItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyItem.swift; sourceTree = "<group>"; };
 		082C441920E7913700A7C892 /* FloatyManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatyManager.swift; sourceTree = "<group>"; };
@@ -1453,11 +1443,6 @@
 		889480221FECEE15006AF5A9 /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
-				0829AC2422B030D000913FD7 /* Montserrat-Bold.ttf */,
-				0829AC2522B030D100913FD7 /* Montserrat-Light.ttf */,
-				0829AC2322B030D000913FD7 /* Montserrat-Medium.ttf */,
-				0829AC2722B030D100913FD7 /* Montserrat-Regular.ttf */,
-				0829AC2622B030D100913FD7 /* Montserrat-SemiBold.ttf */,
 				082071B22241610600285548 /* UberMoveText-Regular.otf */,
 				082071B022415BCA00285548 /* RTLExtensions.swift */,
 				082071AB22415B6300285548 /* DeviceDetector.swift */,
@@ -1851,7 +1836,6 @@
 				08E401CD2282153000EADF1B /* BookForSomeOneTableViewCell.xib in Resources */,
 				088DA996219994EF00ED6E98 /* completed.caf in Resources */,
 				08585F4B2115E94B009DE743 /* ripple.json in Resources */,
-				0829AC2922B030D100913FD7 /* Montserrat-Bold.ttf in Resources */,
 				08FA70A120E3CC1F009B060A /* Localizable.strings in Resources */,
 				0811B17620E7B2AD00B78323 /* ImageCellSender.xib in Resources */,
 				08D62B3B21BA55000066FFD1 /* PickerView.xib in Resources */,
@@ -1861,9 +1845,7 @@
 				0823428A20AD775A0055DDF8 /* LoaderView.xib in Resources */,
 				0848B1992250D0A300649405 /* HomePageCarSelection.xib in Resources */,
 				0876C50F2283425500C3638A /* CouponTableViewCell.xib in Resources */,
-				0829AC2B22B030D100913FD7 /* Montserrat-SemiBold.ttf in Resources */,
 				0811B17720E7B2AD00B78323 /* ImageCellReciever.xib in Resources */,
-				0829AC2C22B030D100913FD7 /* Montserrat-Regular.ttf in Resources */,
 				08172A2C2180EEE70007D00C /* include in Resources */,
 				08FA708720E3CA99009B060A /* Launch.storyboard in Resources */,
 				08FA70AC20E3E695009B060A /* Main.storyboard in Resources */,
@@ -1873,7 +1855,6 @@
 				08001A0D203C241E0076D324 /* CountryPicker.bundle in Resources */,
 				0811B17920E7B2AD00B78323 /* ChatReciever.xib in Resources */,
 				08172A332180EF940007D00C /* lib in Resources */,
-				0829AC2A22B030D100913FD7 /* Montserrat-Light.ttf in Resources */,
 				085F4DDF21367E5100648591 /* clanpro_medium.otf in Resources */,
 				088DA98C2199700E00ED6E98 /* pickedup.caf in Resources */,
 				08408AAF227A27BD00E13171 /* FareTableViewCell.xib in Resources */,
@@ -1881,7 +1862,6 @@
 				081548FC20A1DEA2004D0F7D /* heart.json in Resources */,
 				085F4DE121367E5100648591 /* clanpro_book.otf in Resources */,
 				088DA9942199944D00ED6E98 /* accepted.caf in Resources */,
-				0829AC2822B030D100913FD7 /* Montserrat-Medium.ttf in Resources */,
 				08D8646C2275F438007D56B4 /* FevortiesTableViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
